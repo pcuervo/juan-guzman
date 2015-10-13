@@ -3437,6 +3437,47 @@ fieldset[disabled] .btn-danger.active {
   color: #d9534f;
   background-color: #ffffff;
 }
+.btn__corner--bordered {
+  width: 100px;
+  height: 70px;
+  position: relative;
+}
+.btn__bordered--one {
+  width: 10px;
+  height: 10px;
+  border-top: #D91803 3px solid;
+  border-left: #D91803 3px solid;
+  position: absolute;
+}
+.btn__bordered--two {
+  width: 10px;
+  height: 10px;
+  border-top: #D91803 3px solid;
+  border-right: #D91803 3px solid;
+  left: 90px;
+  position: absolute;
+}
+.btn__bordered--tree {
+  width: 10px;
+  height: 10px;
+  border-bottom: #D91803 3px solid;
+  border-right: #D91803 3px solid;
+  left: 90px;
+  top: 60px;
+  position: absolute;
+}
+.btn__bordered--four {
+  width: 10px;
+  height: 10px;
+  border-bottom: #D91803 3px solid;
+  border-left: #D91803 3px solid;
+  right: 90px;
+  top: 60px;
+  position: absolute;
+}
+.text--overbutton {
+  z-index: 1;
+}
 .btn-link {
   color: #337ab7;
   font-weight: normal;
