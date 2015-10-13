@@ -3503,6 +3503,10 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+.btn--target {
+  border: none;
+  border: 2px dashed #000000;
+}
 .fade {
   opacity: 0;
   -webkit-transition: opacity 0.15s linear;
