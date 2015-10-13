@@ -308,11 +308,26 @@ fieldset[disabled] .btn-danger.active {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
+.img-logo {
+  background-color: #D91803;
+  width: 350px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 5em;
+}
 .img-file-tech {
   font-family: "Cordale";
   font-size: 30px;
   color: #000000;
   background-color: #FFFFFF;
+}
+.img-circle-red {
+  border-radius: 30px;
+  background-color: #D91803;
+}
+div.img-circle-red {
+  width: 20px;
+  height: 20px;
 }
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
