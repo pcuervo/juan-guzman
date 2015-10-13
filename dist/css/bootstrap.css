@@ -3524,9 +3524,6 @@ fieldset[disabled] .btn-danger.active {
   top: 60px;
   position: absolute;
 }
-.text--overbutton {
-  z-index: 1;
-}
 .btn-link {
   color: #337ab7;
   font-weight: normal;
