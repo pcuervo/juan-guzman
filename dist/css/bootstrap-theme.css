@@ -3,60 +3,6 @@
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- p{
-    font-size: 20px;
- }
- .padding__bottom--2{
-    padding-bottom: 2%;
- }
- .border__bottom{
-    border-bottom: 2px solid #D91803; /*color red*/
-    width: inherit;
-    margin-left: 0;
- }
- .border__dotted{
-    border-bottom: 2px dotted black;
-    width: inherit;
- }
-  .border__dotted--w{
-    border-bottom: 2px dotted white;
- }
- .margin--auto{
-    margin: auto;
- }
- .margin__left{
-    margin: 0;
- }
- .bg--red{
-    background-color: #D91803;  /*color red*/
-    color: white;  
-    padding: 2% 1%; 
- }
- .bg--white{
-    background-color: #F2F2F2;  /*color gray - white*/
-    color: black;
-    padding: 1%;
- }
- .bg__title{
-    width: 300px;
- }
- .title1{
-    width: 350px;
- }
-  .title2{
-    width: 500px;
- }
- @media (max-width: 768px) {
-   .bg__title, .title1, .title2{
-      width: 100%;
-      padding: 7% 2%;
-   }
- }
- .bg__subtitle{
-    margin-left: 0;
-    width: inherit;
- }
-
 .btn-default,
 .btn-primary,
 .btn-success,
