@@ -6,50 +6,53 @@
  p{
     font-size: 20px;
  }
- .border-bottom{
+ .padding__bottom--2{
+    padding-bottom: 2%;
+ }
+ .border__bottom{
     border-bottom: 2px solid #D91803; /*color red*/
     width: inherit;
     margin-left: 0;
  }
- .border-dotted{
+ .border__dotted{
     border-bottom: 2px dotted black;
     width: inherit;
  }
-  .border-dotted-w{
+  .border__dotted--w{
     border-bottom: 2px dotted white;
  }
- .margin-auto{
+ .margin--auto{
     margin: auto;
  }
- .margin-left{
+ .margin__left{
     margin: 0;
  }
- .bg-red{
+ .bg--red{
     background-color: #D91803;  /*color red*/
-    color: white;
-    
+    color: white;  
+    padding: 2% 1%; 
  }
- .bg-gray{
-    background-color: #E6E6E6;  /*color gray*/
+ .bg--white{
+    background-color: #F2F2F2;  /*color gray - white*/
     color: black;
- }
- .bg-title{
-    height: 70px;
-    width: 300px;
     padding: 1%;
+ }
+ .bg__title{
+    width: 300px;
  }
  .title1{
     width: 350px;
-    padding: 1.5% 1%;
-    height: 60px;
  }
   .title2{
-    width: 450px;
-    padding: 1%;
-    height: 80px;
+    width: 500px;
  }
- .bg-subtitle{
-    height: 60px;
+ @media (max-width: 768px) {
+   .bg__title, .title1, .title2{
+      width: 100%;
+      padding: 7% 2%;
+   }
+ }
+ .bg__subtitle{
     margin-left: 0;
     width: inherit;
  }
