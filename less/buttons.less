@@ -86,20 +86,28 @@
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
 //Target button
-.text{
-  width: 200px;
-  height: 50px;
-  background-color:blue;
+.text--bordered{
   position: absolute;
-  z-index: 1;
+  width: 100px;
+  text-align: center;
+  margin-top: -35px;
+  p{
+    font-size: 13px;
+    color:black;
+    font-weight: bold;
+  }
 }
+
 div.bordered--img{
   background-image: url("../img/bordered.png");
   height:100px;
 }
+.btn__corner{
+  position: relative;
+}
 .btn__corner--bordered{
   width: 100px;
-  height: 70px;
+  height:50px;
   position: relative;
 }
 
@@ -132,7 +140,7 @@ div.bordered--img{
   border-bottom: #D91803 3px solid;
   border-right: #D91803 3px solid;
   left: 90px;
-  top:60px;
+  top:40px;
   position: absolute;
 }
 .btn__bordered--four{
@@ -141,38 +149,11 @@ div.bordered--img{
   border-bottom: #D91803 3px solid;
   border-left: #D91803 3px solid;
   right: 90px;
-  top:60px;
+  top:40px;
   position: absolute;
 }
 
-.bordered{
-  $border-color: #eee;
-  width: 500px;
-  height: 300px;
-  background: red;
-  margin: 2em auto;
-  position: relative;
-  &:after{
-    content: "";
-    width: 508px;
-    height: 308px;
-    position: absolute;
-    background: -color;
-    z-index: -1;
-    top: -4px;
-    left: -4px;
-    background-image:
-    webkit-linear-gradient(
-      left,
-      transparent 30px
-      )
-    -webkit-linear-gradient(& border-color 30px,
-        transparent 30px,
-        transparent 278px,
-        &border-color 278px);
-  
-  }
-}
+
 // Link buttons
 // -------------------------
 
