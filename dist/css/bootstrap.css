@@ -1161,6 +1161,55 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
+.bg__title {
+  width: 300px;
+}
+.title1 {
+  width: 350px;
+}
+.title2 {
+  width: 500px;
+}
+@media (max-width: 768px) {
+  .bg__title,
+  .title1,
+  .title2 {
+    width: 100%;
+    padding: 7% 2%;
+  }
+}
+.bg__subtitle {
+  margin-left: 0;
+  width: inherit;
+}
+p {
+  font-size: 20px;
+}
+.border__bottom {
+  border-bottom: 2px solid #D91803;
+  /*color red*/
+  width: inherit;
+  margin-left: 0;
+}
+.border__dotted {
+  border-bottom: 2px dotted #000000;
+  width: inherit;
+}
+.border__dotted--w {
+  border-bottom: 2px dotted #FFFFFF;
+}
+.bg--red {
+  background-color: #D91803;
+  /*color red*/
+  color: #FFFFFF;
+  padding: 2% 1%;
+}
+.bg--white {
+  background-color: #FFFFFF;
+  /*color white*/
+  color: #000000;
+  padding: 1%;
+}
 h1,
 h2,
 h3,
@@ -3436,6 +3485,44 @@ fieldset[disabled] .btn-danger.active {
 .btn-danger .badge {
   color: #d9534f;
   background-color: #ffffff;
+}
+.btn__corner--bordered {
+  width: 100px;
+  height: 70px;
+  position: relative;
+}
+.btn__bordered--one {
+  width: 10px;
+  height: 10px;
+  border-top: #D91803 3px solid;
+  border-left: #D91803 3px solid;
+  position: absolute;
+}
+.btn__bordered--two {
+  width: 10px;
+  height: 10px;
+  border-top: #D91803 3px solid;
+  border-right: #D91803 3px solid;
+  left: 90px;
+  position: absolute;
+}
+.btn__bordered--tree {
+  width: 10px;
+  height: 10px;
+  border-bottom: #D91803 3px solid;
+  border-right: #D91803 3px solid;
+  left: 90px;
+  top: 60px;
+  position: absolute;
+}
+.btn__bordered--four {
+  width: 10px;
+  height: 10px;
+  border-bottom: #D91803 3px solid;
+  border-left: #D91803 3px solid;
+  right: 90px;
+  top: 60px;
+  position: absolute;
 }
 .btn-link {
   color: #337ab7;
@@ -5858,7 +5945,7 @@ button.list-group-item-danger.active:focus {
   padding: 9px;
   border-radius: 3px;
 }
-.close {
+NHG VGVSSIHUIHUI .close {
   float: right;
   font-size: 21px;
   font-weight: bold;
@@ -5868,15 +5955,15 @@ button.list-group-item-danger.active:focus {
   opacity: 0.2;
   filter: alpha(opacity=20);
 }
-.close:hover,
-.close:focus {
+NHG VGVSSIHUIHUI .close:hover,
+NHG VGVSSIHUIHUI .close:focus {
   color: #000000;
   text-decoration: none;
   cursor: pointer;
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-button.close {
+buttonNHG VGVSSIHUIHUI .close {
   padding: 0;
   cursor: pointer;
   background: transparent;
@@ -6474,6 +6561,15 @@ button.close {
   .carousel-indicators {
     bottom: 20px;
   }
+}
+.padding__bottom--2 {
+  padding-bottom: 2%;
+}
+.margin--auto {
+  margin: auto;
+}
+.margin__left {
+  margin: 0;
 }
 .clearfix:before,
 .clearfix:after,

@@ -6,6 +6,52 @@
 // Headings
 // -------------------------
 
+ .bg__title{
+    width: 300px;
+ }
+ .title1{
+    width: 350px;
+ }
+  .title2{
+    width: 500px;
+ }
+ @media (max-width: 768px) {
+   .bg__title, .title1, .title2{
+      width: 100%;
+      padding: 7% 2%;
+   }
+ }
+ .bg__subtitle{
+    margin-left: 0;
+    width: inherit;
+ }
+  p{
+    font-size: 20px;
+ }
+ .border__bottom{
+    border-bottom: 2px solid #D91803; /*color red*/
+    width: inherit;
+    margin-left: 0;
+ }
+ .border__dotted{
+    border-bottom: 2px dotted #000000;
+    width: inherit;
+ }
+  .border__dotted--w{
+    border-bottom: 2px dotted #FFFFFF;
+ }
+
+ .bg--red{
+    background-color: #D91803;  /*color red*/
+    color: #FFFFFF;  
+    padding: 2% 1%; 
+ }
+ .bg--white{
+    background-color: #FFFFFF; /*color white*/
+    color: #000000;
+    padding: 1%;
+ }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: @headings-font-family;
