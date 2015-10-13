@@ -86,7 +86,17 @@
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
 //Target button
-
+.text{
+  width: 200px;
+  height: 50px;
+  background-color:blue;
+  position: absolute;
+  z-index: 1;
+}
+div.bordered--img{
+  background-image: url("../img/bordered.png");
+  height:100px;
+}
 .btn__corner--bordered{
   width: 100px;
   height: 70px;
@@ -108,6 +118,14 @@
   left: 90px;
   position: absolute;
 }
+.btn__bordered--center{
+  width: 10px;
+  height: 10px;
+  border-top: #D91803 3px solid;
+  border-right: #D91803 3px solid;
+  left: 50px;
+  position: absolute;
+}
 .btn__bordered--tree{
   width: 10px;
   height: 10px;
@@ -126,6 +144,7 @@
   top:60px;
   position: absolute;
 }
+
 .bordered{
   $border-color: #eee;
   width: 500px;
@@ -133,23 +152,25 @@
   background: red;
   margin: 2em auto;
   position: relative;
-  &:before{
+  &:after{
     content: "";
     width: 508px;
     height: 308px;
     position: absolute;
-    background: $border-color;
+    background: -color;
     z-index: -1;
     top: -4px;
     left: -4px;
-    background-image:(
-      linear-gradeint(
-        & border-color 30px,
+    background-image:
+    webkit-linear-gradient(
+      left,
+      transparent 30px
+      )
+    -webkit-linear-gradient(& border-color 30px,
         transparent 30px,
         transparent 278px,
-        &border-color 278px)
-      )
-
+        &border-color 278px);
+  
   }
 }
 // Link buttons
