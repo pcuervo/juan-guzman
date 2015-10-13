@@ -313,13 +313,27 @@ fieldset[disabled] .btn-danger.active {
   width: 350px;
   color: #FFFFFF;
   display: inline-block;
-  font-size: 5em;
+  font-size: 2em;
 }
 .img-file-tech {
   font-family: "Cordale";
   font-size: 30px;
   color: #000000;
   background-color: #FFFFFF;
+}
+.img-background {
+  height: 300px;
+  background-image: url("../img/img1.jpg");
+}
+.img-form {
+  position: absolute;
+  width: 20px;
+  background-color: #000000;
+}
+.img-background-block {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .img-circle-red {
   border-radius: 30px;
