@@ -182,6 +182,10 @@ th {
   padding: 0;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
+.img-logo__inicio {
+  width: 30%;
+  height: inherit;
+}
 @media print {
   *,
   *:before,
@@ -1179,7 +1183,8 @@ hr {
   }
 }
 .bg__subtitle {
-  width: 250px;
+  width: 160px;
+  padding: 1%;
 }
 p {
   font-size: 20px;
@@ -1195,7 +1200,7 @@ h3 {
   line-height: 1;
 }
 .border__bottom--red {
-  border-bottom: 5px solid #D91803;
+  border: 5px solid #D91803;
   /*color red*/
   padding: 0 1%;
 }
