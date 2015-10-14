@@ -182,10 +182,6 @@ th {
   padding: 0;
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
-.img-logo__inicio {
-  width: 30%;
-  height: inherit;
-}
 @media print {
   *,
   *:before,
@@ -1179,7 +1175,7 @@ hr {
   .title1,
   .title2 {
     width: 100%;
-    padding: 7% 2%;
+    padding: 20% 5%;
   }
 }
 .bg__subtitle {
@@ -3511,6 +3507,17 @@ fieldset[disabled] .btn-danger.active {
 .text--bordered p {
   font-size: 13px;
   color: black;
+  font-weight: bold;
+}
+.text--bordered-white {
+  position: absolute;
+  width: 100px;
+  text-align: center;
+  margin-top: -35px;
+}
+.text--bordered-white p {
+  font-size: 13px;
+  color: white;
   font-weight: bold;
 }
 div.bordered--img {
@@ -6627,6 +6634,11 @@ buttonNHG VGVSSIHUIHUI .close {
   padding: 2% ;
   margin-bottom: 1%;
 }
+.bg__btn--black {
+  background-color: #000000;
+  padding: 10% 0;
+  text-align: center;
+}
 .circle__color {
   border-radius: 50%;
   width: 200px;
@@ -6650,6 +6662,9 @@ buttonNHG VGVSSIHUIHUI .close {
 }
 .bg-color--red {
   background-color: #D91803;
+}
+.text--red {
+  color: #D91803;
 }
 .clearfix:before,
 .clearfix:after,
