@@ -3524,10 +3524,6 @@ fieldset[disabled] .btn-danger.active {
   color: white;
   font-weight: bold;
 }
-div.bordered--img {
-  background-image: url("../img/bordered.png");
-  height: 100px;
-}
 .btn__corner {
   position: relative;
 }
@@ -3576,6 +3572,15 @@ div.bordered--img {
   right: 90px;
   top: 40px;
   position: absolute;
+}
+.btn__map {
+  background-color: #D91803;
+  width: intrinsic;
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 2%;
+  border: none;
 }
 .btn-link {
   color: #337ab7;
@@ -6668,11 +6673,7 @@ buttonNHG VGVSSIHUIHUI .close {
   background-color: #D91803;
 }
 .text--red {
-<<<<<<< HEAD
   color: #D91803;
-=======
-  color: #d91803;
->>>>>>> 6ecbcbc8f75e5f925dddbf4bf7c8bac1061aa406
 }
 .clearfix:before,
 .clearfix:after,
