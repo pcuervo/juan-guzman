@@ -1200,9 +1200,10 @@ h3 {
   line-height: 1;
 }
 .border__bottom--red {
-  border: 5px solid #D91803;
+  border-bottom: 5px solid #D91803;
   /*color red*/
   padding: 0 1%;
+  width: intrinsic;
 }
 .border__dotted {
   border-bottom: 2px dotted #000000;
@@ -1225,6 +1226,9 @@ h3 {
   /*color white*/
   color: #000000;
   padding: 1%;
+}
+.bg--gray h2 {
+  text-align: center;
 }
 h1,
 h2,
@@ -6613,8 +6617,8 @@ buttonNHG VGVSSIHUIHUI .close {
 .margin__left {
   margin: 0;
 }
-.padding--5 {
-  padding: 5%;
+.padding--10 {
+  padding: 10%;
 }
 .bg--gray {
   background-color: #F2F2F2;
@@ -6650,6 +6654,9 @@ buttonNHG VGVSSIHUIHUI .close {
 }
 .bg-color--red {
   background-color: #D91803;
+}
+.text--red {
+  color: #d91803;
 }
 .clearfix:before,
 .clearfix:after,
