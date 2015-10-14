@@ -23,28 +23,36 @@
   padding: 2% 0;
   margin-bottom: 1%;
  }
-
- //Border
-
+  .bg--black{
+  background-color: #000000;
+  opacity: 0.5;
+  padding: 2% ;
+  margin-bottom: 1%;
+ }
 
  // Colors
 .circle__color{
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 3%;
+  width: 200px;
+  height: 200px;
+  padding: 5%;
 }
-.color--black{
+@media (max-width: 768px){
+  .circle__color{
+    padding-top: 8%;
+  }
+}
+.bg-color--black{
   background-color: #000000;
 }
-.color--silver{
+.bg-color--silver{
   background-color: #999999;
 }
-.color--white{
+.bg-color--white{
   background-color: #FFFFFF;
   border: 1px solid #999999;
 }
-.color--red{
+.bg-color--red{
   background-color: #D91803;
 }
 
