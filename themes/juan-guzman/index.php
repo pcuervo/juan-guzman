@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php get_header(); ?>
 
 	<section>
@@ -122,3 +123,10 @@
 	</section>
 
 <?php get_footer(); ?>
+=======
+	<?php get_header(); ?>
+	<!-- Insert content here -->
+	
+	<?php get_sidebar(); ?>
+	<?php get_footer(); ?>
+>>>>>>> ac07891cc2bacea5b048c9eea70050982b236bad
