@@ -2,73 +2,49 @@
 // Utility classes
 // --------------------------------------------------
 
-// Padding - margin
+// Box model
 // -------------------------
- .padding__bottom--2{
-    padding-bottom: 2%;
- }
-.margin--auto{
-    margin: auto;
- }
- .margin__left{
-    margin: 0;
- }
- .padding--10{
-  padding: 10%;
- }
 
+//Padding
 
- //Background
- .bg--gray{
-  background-color: #F2F2F2;
-  padding: 2% 0;
-  margin-bottom: 1%;
- }
-  .bg--black{
-  background-color: #000000;
-  opacity: 0.5;
-  padding: 2% ;
-  margin-bottom: 1%;
- }
- .bg__btn--black{
-  background-color: #000000;
-  padding: 10% 0;
-  text-align: center;
- }
+.padding{ padding: @padding-base-vertical @padding-base-horizontal; }
+.padding--xl{ padding: @padding-xl-vertical @padding-xl-horizontal; }
+.padding--large{ padding: @padding-large-vertical @padding-large-horizontal; }
+.padding--small{ padding: @padding-small-vertical @padding-small-horizontal; }
+.padding--xs{ padding: @padding-xs-vertical @padding-xs-horizontal; }
 
- // Colors
-.circle__color{
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  padding: 5%;
+.padding-bottom{ padding-bottom: @padding-base-vertical; }
+
+.padding-top-bottom{
+  padding-top: @padding-base-horizontal;
+  padding-bottom: @padding-base-horizontal;
 }
-@media (max-width: 768px){
-  .circle__color{
+
+//Border
+.border-bottom--primary{ border-bottom: 5px solid @brand-primary;}
+
+.border-bottom--dotted{ border-bottom: 2px dotted @dark;}
+.border-bottom--dotted--light{ border-bottom: 2px dotted @light;}
+
+//Margin
+.no-margin{ margin: 0; }
+
+.margin-left--0{ margin-left: 0;}
+
+.margin-auto{ margin: auto; }
+
+
+
+// Geometric forms
+// -------------------------
+.circle{
+  width: 200px; height: 200px;
+  padding: 5%;
+  border-radius: 50%;
+
+  @media (max-width: @screen-sm-min){
     padding-top: 8%;
   }
-}
-.bg-color--black{
-  background-color: #000000;
-}
-.bg-color--silver{
-  background-color: #999999;
-}
-.bg-color--white{
-  background-color: #FFFFFF;
-  border: 1px solid #999999;
-}
-.bg-color--red{
-  background-color: #D91803;
-}
-
-<<<<<<< HEAD
-=======
-@red: #D91803 ;
-
->>>>>>> 558a6481a4a286597cc024c26b29339fafe9b490
-.text--red{
- color:  #D91803;
 }
 
 // Floats

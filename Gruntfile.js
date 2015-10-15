@@ -133,16 +133,14 @@ module.exports = function (grunt) {
         preserveComments: 'some'
       },
       core: {
-        src: '<%= concat.bootstrap.dest %>',
+        src: 'dist/js/<%= pkg.name %>.js',
         dest: 'dist/js/<%= pkg.name %>.min.js'
       },
-      customize: {
-        src: configBridge.paths.customizerJs,
-        dest: 'docs/assets/js/customize.min.js'
-      },
-      docsJs: {
-        src: configBridge.paths.docsJs,
-        dest: 'docs/assets/js/docs.min.js'
+      js: {
+        files: {
+          'js/functions.min.js': ['js/functions.js'],
+          'js/plugins.min.js': ['js/plugins.js']
+        }
       }
     },
 
@@ -367,6 +365,10 @@ module.exports = function (grunt) {
       less: {
         files: 'less/**/*.less',
         tasks: 'less'
+      },
+      js: {
+        files: ["dist/js/<%= pkg.name %>.js", "js/functions.js", "js/plugins.js"],
+        tasks: ["uglify"]
       }
     },
 
