@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<section>
-		<img class="[ img-responsive ]" src="img/img1.jpg" alt="">
+		<img class="[ img-responsive ]" src="<?php echo THEMEPATH; ?>img/img1.jpg" alt="">
 		<div class="[ text-center ]">
 			<p class="[ bg-light ][ header__subtitle ][ padding-top-bottom no-margin ][ color-dark font-sans-serif text-uppercase ]"><strong>La crónica citadina de</strong></p>
 			<h1 class="[ bg-primary ][ header__title ][ padding-top-bottom no-margin ][ text-uppercase ]"><strong>Juan Guzmán</strong></h1>
@@ -22,7 +22,7 @@
 	<section>
 		<div class="[ row ]">
 			<div class="[ col-xs-12 ] [ text-center ]">
-				<img class="[ img-background-block ]" src="img/img3.jpg" alt="">
+				<img class="[ img-background-block ]" src=" <?php echo THEMEPATH; ?> img/img3.jpg" alt="">
 			</div>
 		</div>
 		<div class="[ row ]">
@@ -39,16 +39,16 @@
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<img src="img/img1.jpg" alt="">
+							<img src="<?php echo THEMEPATH; ?>img/img1.jpg" alt="">
 						</div>
 						<div class="item">
-							<img src="img/img2.jpg" alt="">
+							<img src="<?php echo THEMEPATH; ?>img/img2.jpg" alt="">
 						</div>
 						<div class="item">
-							<img src="img/img3.jpg" alt="">
+							<img src="<?php echo THEMEPATH; ?>img/img3.jpg" alt="">
 						</div>
 						<div class="item">
-							<img src="img/img1.jpg" alt="">
+							<img src="<?php echo THEMEPATH; ?>img/img1.jpg" alt="">
 						</div>
 					</div>
 					<!-- Left arrow -->
@@ -68,7 +68,7 @@
 			<a class="[ btn__map ][ uppercase ]" href="">
 				Mapa
 			</a>
-			<img class=" [ img-background-home ] " src="img/img3.jpg">
+			<img class=" [ img-background-home ] " src="<?php echo THEMEPATH; ?>img/img3.jpg">
 		</div>
 		<div class="[ bg-color--black ] [ padding--10 ]">
 			<div class="[ row ]">
@@ -85,7 +85,7 @@
 		</div>
 	</section>
 	<section>
-		<img class=" [ img-background-home ] " src="img/img2.jpg">
+		<img class=" [ img-background-home ] " src="<?php echo THEMEPATH; ?>img/img2.jpg">
 		<div class="padding--10">
 			<div class="[ row ]">
 				<div class="[ col-xs-12 ]">

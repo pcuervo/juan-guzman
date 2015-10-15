@@ -6005,6 +6005,10 @@ buttonNHG VGVSSIHUIHUI .close {
   border: 0;
   -webkit-appearance: none;
 }
+.img__xs-100 {
+  width: 20px;
+  height: inherit;
+}
 .modal-open {
   overflow: hidden;
 }
