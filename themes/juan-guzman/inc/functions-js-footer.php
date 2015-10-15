@@ -23,6 +23,10 @@ function footer_scripts(){
 			 * Triggered events
 			**/
 
+			<?php if( is_single() ) : ?>
+				initTestMap();
+			<?php endif; ?>
+
 <?php  ?>
 		</script>
 <?php
