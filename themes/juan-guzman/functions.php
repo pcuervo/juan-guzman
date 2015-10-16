@@ -8,6 +8,7 @@
 	* Define paths to javascript, styles, theme and site.
 	**/
 	define( 'JSPATH', get_template_directory_uri() . '/js/' );
+	define( 'BOOTSTRAP_PATH', get_template_directory_uri() . '/dist/' );
 	define( 'CSSPATH', get_template_directory_uri() . '/css/' );
 	define( 'THEMEPATH', get_template_directory_uri() . '/' );
 	define( 'SITEURL', site_url('/') );
@@ -45,6 +46,7 @@
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'bootstrap_js', BOOTSTRAP_PATH.'/js/bootstrap.js', array('plugins'), '1.0', true );
 
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
@@ -103,7 +105,23 @@ function print_title(){
 	#SET/GET FUNCTIONS
 \*------------------------------------*/
 
+/**
+ * Jalar la latitud del post
+ * @param int $post_id
+ * @return int $lat
+ */
+function get_lat( $post_id ){
+	return get_post_meta($post_id, '_lat_meta', true);
+}// get_lat
 
+/**
+ * Jalar la longitud del post
+ * @param int $post_id
+ * @return int $lng
+ */
+function get_lng( $post_id ){
+	return get_post_meta($post_id, '_lng_meta', true);
+}// get_lng
 
 
 
