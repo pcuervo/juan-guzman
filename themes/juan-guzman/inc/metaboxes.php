@@ -12,7 +12,7 @@ add_action('add_meta_boxes', function(){
 			break;
 		default:
 			// POST TYPES
-			//add_metaboxes_POST_TYPE();
+			add_metaboxes_map_test();
 	}
 });
 
@@ -24,11 +24,8 @@ add_action('add_meta_boxes', function(){
 /**
 * Add metaboxes for page type "Contacto"
 **/
-function add_metaboxes_PAGE(){
-	// add_meta_box( 'social', 'Redes sociales', 'metabox_social', 'page', 'advanced', 'high' );
-	// add_meta_box( 'telefono', 'Teléfonos', 'metabox_telefono', 'page', 'advanced', 'high' );
-	// add_meta_box( 'email', 'E-mail de contacto', 'metabox_email', 'page', 'advanced', 'high' );
-	// add_meta_box( 'address', 'Address', 'metabox_address', 'page', 'advanced', 'high' );
+function add_metaboxes_map_test(){
+	add_meta_box( 'coordenadas', 'Coordenadas', 'metabox_coordenadas', 'prueba-mapas', 'advanced', 'high' );
 }// add_metaboxes_PAGE
 
 
@@ -42,18 +39,18 @@ function add_metaboxes_PAGE(){
 /**
 * Display metabox in page or post type
 **/
-function metabox_social($post){
-	$facebook = get_post_meta($post->ID, '_facebook_meta', true);
-	$twitter = get_post_meta($post->ID, '_twitter_meta', true);
+function metabox_coordenadas($post){
+	$lat = get_post_meta($post->ID, '_lat_meta', true);
+	$lon = get_post_meta($post->ID, '_lon_meta', true);
 
-	wp_nonce_field(__FILE__, '_facebook_meta_nonce');
-	wp_nonce_field(__FILE__, '_twitter_meta_nonce');
+	wp_nonce_field(__FILE__, '_lat_meta_nonce');
+	wp_nonce_field(__FILE__, '_lon_meta_nonce');
 
-	echo "<label>Facebook:</label>";
-	echo "<input type='text' class='[ widefat ]' name='_facebook_meta' value='$facebook' />";
-	echo "<label>Twitter:</label>";
-	echo "<input type='text' class='[ widefat ]' name='_twitter_meta' value='$twitter' />";
-}// metabox_social
+	echo "<label>Latitud:</label>";
+	echo "<input type='text' class='[ widefat ]' name='_lat_meta' value='$lat' />";
+	echo "<label>Longitud:</label>";
+	echo "<input type='text' class='[ widefat ]' name='_lon_meta' value='$lon' />";
+}// metabox_coordenadas
 
 	
 
@@ -65,19 +62,23 @@ function metabox_social($post){
 
 	add_action('save_post', function( $post_id ){
 
-		// save_metabox_PAGE( $post_id );
+		save_metabox_coordenadas( $post_id );
 		
 	});
 
 	/**
 	* Save the metaboxes for post type "Productos"
 	**/
-	function save_metabox_PAGE( $post_id ){
+	function save_metabox_coordenadas( $post_id ){
 		
-		// Net content
-		// if ( isset($_POST['_net_content_meta']) and check_admin_referer( __FILE__, '_net_content_meta_nonce') ){
-		// 	update_post_meta($post_id, '_net_content_meta', $_POST['_net_content_meta']);
-		// }
+		// Latitud
+		if ( isset($_POST['_lat_content_meta']) and check_admin_referer( __FILE__, '_lat_content_meta_nonce') ){
+			update_post_meta($post_id, '_lat_content_meta', $_POST['_lat_content_meta']);
+		}
+		// Longitud
+		if ( isset($_POST['_lon_content_meta']) and check_admin_referer( __FILE__, '_lon_content_meta_nonce') ){
+			update_post_meta($post_id, '_lon_content_meta', $_POST['_lon_content_meta']);
+		}
 
-	}// save_metabox_PAGE
+	}// save_metabox_coordenadas
 	
