@@ -8,17 +8,18 @@
 
 .btn {
   display: inline-block;
-  margin-bottom: 0; // For input.btn
-  font-weight: @btn-font-weight;
-  text-align: center;
+  margin-bottom: 0; border: 1px solid transparent;
+  font-family: @font-family-sans-serif; font-weight: @btn-font-weight;
+  text-align: center; text-transform: uppercase;
   vertical-align: middle;
   touch-action: manipulation;
   cursor: pointer;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
   white-space: nowrap;
-  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; 0);
   .user-select(none);
+
+  .transition(all 0.3s ease);
 
   &,
   &:active,
@@ -85,74 +86,26 @@
 .btn-danger {
   .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
 }
-//Target button
 
-.text--bordered{
-  position: absolute;
-  width: 100px;
-  text-align: center;
-  margin-top: -35px;
-  p{
-    font-size: 13px;
-    color:black;
-    font-weight: bold;
-  }
-}
-.text--bordered-white{
-  position: absolute;
-  width: 100px;
-  text-align: center;
-  margin-top: -35px;
-  p{
-    font-size: 13px;
-    color:white;
-    font-weight: bold;
+//Bordered button
+.btn-bordered{
+  border-left: 1px solid @brand-primary; border-right: 1px solid @brand-primary;
+  color: @light;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: @brand-primary;
+    border-left: 1px solid @light; border-right: 1px solid @light;
   }
 }
 
-.btn__corner{
-  position: relative;
-}
-.btn__corner--bordered{
-  width: 100px;
-  height:50px;
-  position: relative;
-}
-
-.btn__bordered--one{
-  width: 10px; height: 10px;
-  border-top: @brand-primary 3px solid; border-left: @brand-primary 3px solid;
-  position: absolute;
-}
-.btn__bordered--two{
-  width: 10px; height: 10px;
-  border-top: @brand-primary 3px solid; border-right: @brand-primary 3px solid;
-  position: absolute; left: 90px;
-}
-.btn__bordered--center{
-  width: 10px; height: 10px;
-  border-top: @brand-primary 3px solid; border-right: @brand-primary 3px solid;
-  position: absolute; left: 50px;
-}
-.btn__bordered--tree{
-  width: 10px; height: 10px;
-  border-bottom: @brand-primary 3px solid; border-right: @brand-primary 3px solid;
-  position: absolute; top:40px; left: 90px;
-}
-.btn__bordered--four{
-  width: 10px; height: 10px;
-  border-bottom: @brand-primary 3px solid; border-left: @brand-primary 3px solid;
-  position: absolute; top:40px; right: 90px;
-}
 //Map button
 .btn__map{
   background-color: @brand-primary;
-  width: intrinsic;
-  color: #FFFFFF;
+  color: @light;
   display: inline-block;
   font-size: 1.5em;
-  padding: 2%;
-  border:none;
 }
 
 // Link buttons
@@ -200,14 +153,14 @@
 
 .btn-lg {
   // line-height: ensure even-numbered height of button next to large input
-  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-large);
+  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; 0);
 }
 .btn-sm {
   // line-height: ensure proper height of button next to small input
-  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; 0);
 }
 .btn-xs {
-  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @btn-border-radius-small);
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; 0);
 }
 
 
