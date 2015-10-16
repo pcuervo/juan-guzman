@@ -23,10 +23,15 @@
 }
 
 //Border
-.border-bottom--primary{ border-bottom: 5px solid @brand-primary;}
+.border-bottom{
+  border-bottom-width: 1; border-bottom-style: solid; border-bottom-color: @dark;
+}
 
-.border-bottom--dotted{ border-bottom: 2px dotted @dark;}
-.border-bottom--dotted--light{ border-bottom: 2px dotted @light;}
+.border-bottom--primary{ border-bottom-color: @brand-primary; }
+.border-bottom--light{ border-bottom-color: @light; }
+
+.border-bottom--dotted{ border-bottom-style: dotted; }
+
 
 //Margin
 .no-margin{ margin: 0; }
@@ -110,3 +115,7 @@
 
 .relative{ position: relative; }
 .absolute{ position: absolute; }
+
+.absolute-bottom--0{ bottom: 0; }
+
+.absolute-left--0{ left: 0; }

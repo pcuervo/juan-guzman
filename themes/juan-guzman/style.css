@@ -1276,6 +1276,9 @@ h6,
 .h6 {
   font-size: 16px;
 }
+h2 {
+  text-transform: uppercase;
+}
 .header__subtitle {
   font-size: 26px;
   line-height: 1;
@@ -3483,6 +3486,9 @@ fieldset[disabled] .btn-danger.active {
 .btn-danger .badge {
   color: #d9534f;
   background-color: #ffffff;
+}
+.btn-squared {
+  padding: 18px;
 }
 .btn-bordered {
   border-left: 1px solid #d91803;
@@ -6570,14 +6576,19 @@ buttonNHG VGVSSIHUIHUI .close {
   padding-top: 36px;
   padding-bottom: 36px;
 }
+.border-bottom {
+  border-bottom-width: 1;
+  border-bottom-style: solid;
+  border-bottom-color: #000000;
+}
 .border-bottom--primary {
-  border-bottom: 5px solid #d91803;
+  border-bottom-color: #d91803;
+}
+.border-bottom--light {
+  border-bottom-color: #ffffff;
 }
 .border-bottom--dotted {
-  border-bottom: 2px dotted #000000;
-}
-.border-bottom--dotted--light {
-  border-bottom: 2px dotted #ffffff;
+  border-bottom-style: dotted;
 }
 .no-margin {
   margin: 0;
@@ -6691,6 +6702,12 @@ buttonNHG VGVSSIHUIHUI .close {
 }
 .absolute {
   position: absolute;
+}
+.absolute-bottom--0 {
+  bottom: 0;
+}
+.absolute-left--0 {
+  left: 0;
 }
 @-ms-viewport {
   width: device-width;

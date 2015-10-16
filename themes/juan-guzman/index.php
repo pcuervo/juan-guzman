@@ -28,24 +28,16 @@
 	</section>
 
 	<section>
-		<div>
-			<a class="[ btn__map ][ uppercase ]" href="">
+		<div class="[ relative ]">
+			<img class="[ img-responsive img-background-home ] " src="<?php echo THEMEPATH; ?>img/img3.jpg">
+			<a class="[ btn btn-primary btn-squared ][ absolute absolute-bottom--0 absolute-left--0 ]" href="#">
 				Mapa
 			</a>
-			<img class="[ img-responsive img-background-home ] " src="<?php echo THEMEPATH; ?>img/img3.jpg">
 		</div>
-		<div class="[ bg-color--black ] [ padding--10 ]">
-			<div class="[ row ]">
-				<div class="[ col-xs-12]">
-					<h2 class="[ border__bottom--red text--white ] [ margin--auto ]">HANS GUTMANN</h2>
-				</div>
-			</div>
-			<div class="[ row ]">
-				<div class="[ col-xs-12 ]">
-					<p class="[ padding--10 ] [ text--white ]">El primer nombre de Juan Guzmàn fue Hans Gutmann. Nacido en <span class="[ border__dotted--white ]">Colonia, Alemania,</span> en 1911. Hizo estudios en ingenierìa metalùrgica.</p>
-					<span class="[ text--red  text--center] [ glyphicon glyphicon-arrow-down ]"></span>
-				</div>
-			</div>
+		<div class="[ bg-dark ][ padding ]">
+			<h2 class="[ color-light text-center ]"><span class="[ border-bottom border-bottom--primary ]">HANS</span> GUTMANN</h2>
+			<p class="[ padding--10 ] [ text--white ]">El primer nombre de Juan Guzmàn fue Hans Gutmann. Nacido en <u>Colonia, Alemania,</u> en 1911. Hizo estudios en ingenierìa metalùrgica.</p>
+			<span class="[ text--red  text--center] [ glyphicon glyphicon-arrow-down ]"></span>
 		</div>
 	</section>
 

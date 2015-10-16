@@ -5,18 +5,20 @@
       #mapa { height: 100%; }
     </style>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12"><?php the_title() ?></div>
-			<div class="col-md-6">
-				<div id="mapa" style="height: 500px;"></div>
+	<section>
+		<div class="[ container ][ text-center ]">
+			<div class="[ row ]">
+				<a href="#" class="btn__corner">
+					<div class="[ text--bordered ][ text-center ]">
+						<p><em>#SabíasQue</em></p>
+					</div>
+				</a>
 			</div>
-			<div class="col-md-6">
-				<div class="[ street-view-img ]">
-				</div>
+			<div class="[ row ]">
+				<p>Fue en el cruce de las calles 5 de Mayo y San Juan de Letrán, hoy Eje Central, donde se colocaron los letreros de la XEB anunciando el aumento de su potencia a 100,000 watts.</p>
 			</div>
 		</div>
-	</div>
+	</section>
 
 
 <?php get_footer(); ?>
