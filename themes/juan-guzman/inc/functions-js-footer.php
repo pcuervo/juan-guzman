@@ -23,14 +23,21 @@ function footer_scripts(){
 			 * Triggered events
 			**/
 
+			<?php if( is_archive() ) : ?>
+
+				addAllMarkers();
+
+			<?php endif; ?>
+
+
+
 			<?php if( is_single() ) : ?>
 
+				// Pasar a función
 				var lat = <?php echo get_lat( get_the_ID() ); ?>;
 				var lng = <?php echo get_lng( get_the_ID() ); ?>;
-				var mapa = createSingleMap();
-				var markerRef = createSingleMarker( mapa, lat, lng );
-				var markerRefDif = createSingleMarker( mapa, 19.427786, -99.178301 );
-				var markers = [ markerRef, markerRefDif ];
+				var mapa = createEmptyMap();
+				var markers = [ createMarker( mapa, lat, lng ) ];
 				autoCenter( mapa, markers );
 				displayStreetViewImage( '.street-view-img', lat, lng, 600, 300 );
 

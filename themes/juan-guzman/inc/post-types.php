@@ -8,17 +8,17 @@ add_action('init', function(){
 
 	// MAP TEST
 	$labels = array(
-		'name'          => 'Prueba mapas',
-		'singular_name' => 'Prueba mapas',
-		'add_new'       => 'Nuevo prueba',
-		'add_new_item'  => 'Nuevo prueba',
-		'edit_item'     => 'Editar prueba',
-		'new_item'      => 'Nuevo prueba',
+		'name'          => 'Fotos JG',
+		'singular_name' => 'Fotos JG',
+		'add_new'       => 'Nueva foto JG',
+		'add_new_item'  => 'Nueva foto JG',
+		'edit_item'     => 'Editar foto JG',
+		'new_item'      => 'Nueva foto JG',
 		'all_items'     => 'Todas',
-		'view_item'     => 'Ver prueba',
+		'view_item'     => 'Ver foto JG',
 		'search_items'  => 'Buscar pruebas',
 		'not_found'     => 'No se encontró',
-		'menu_name'     => 'Prueba mapas'
+		'menu_name'     => 'Fotos JG'
 	);
 	$args = array(
 		'labels'             => $labels,
@@ -27,13 +27,13 @@ add_action('init', function(){
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
-		'rewrite'            => array( 'slug' => 'prueba-mapas' ),
+		'rewrite'            => array( 'slug' => 'foto-jg' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => 6,
 		'supports'           => array( 'title', 'editor', 'thumbnail' )
 	);
-	register_post_type( 'prueba-mapas', $args );
+	register_post_type( 'foto-jg', $args );
 
 });

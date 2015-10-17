@@ -12,9 +12,10 @@ add_action('add_meta_boxes', function(){
 			break;
 		default:
 			// POST TYPES
-			add_metaboxes_map_test();
+			add_metaboxes_fotos_jg();
 	}
 });
+
 
 
 /*------------------------------------*\
@@ -24,11 +25,14 @@ add_action('add_meta_boxes', function(){
 /**
 * Add metaboxes for page type "Contacto"
 **/
-function add_metaboxes_map_test(){
-	add_meta_box( 'coordenadas', 'Coordenadas', 'metabox_coordenadas', 'prueba-mapas', 'advanced', 'high' );
+function add_metaboxes_fotos_jg(){
+
+	add_meta_box( 'texto_complementario', 'Texto Complementario', 'metabox_texto_complementario', 'foto-jg', 'advanced', 'high' );
+	add_meta_box( 'lugar', 'Lugar', 'metabox_lugar', 'foto-jg', 'advanced', 'high' );
+	add_meta_box( 'fecha', 'Fecha', 'metabox_fecha', 'foto-jg', 'advanced', 'high' );
+	add_meta_box( 'coordenadas', 'Coordenadas', 'metabox_coordenadas', 'foto-jg', 'advanced', 'high' );
+
 }// add_metaboxes_PAGE
-
-
 
 
 
@@ -38,8 +42,10 @@ function add_metaboxes_map_test(){
 	
 /**
 * Display metabox in page or post type
+* @param obj $post
 **/
-function metabox_coordenadas($post){
+function metabox_coordenadas( $post ){
+
 	$lat = get_post_meta($post->ID, '_lat_meta', true);
 	$lng = get_post_meta($post->ID, '_lng_meta', true);
 
@@ -50,7 +56,50 @@ function metabox_coordenadas($post){
 	echo "<input type='text' class='[ widefat ]' name='_lat_meta' value='$lat' />";
 	echo "<label>Longitud:</label>";
 	echo "<input type='text' class='[ widefat ]' name='_lng_meta' value='$lng' />";
+
 }// metabox_coordenadas
+
+/**
+* Display metabox in page or post type
+* @param obj $post
+**/
+function metabox_lugar( $post ){
+
+	$lugar = get_post_meta($post->ID, '_lugar_meta', true);
+
+	wp_nonce_field(__FILE__, '_lugar_meta_nonce');
+	
+	echo "<input type='text' class='[ widefat ]' name='_lugar_meta' value='$lugar' />";
+
+}// metabox_lugar
+
+/**
+* Display metabox in page or post type
+* @param obj $post
+**/
+function metabox_fecha( $post ){
+
+	$fecha = get_post_meta($post->ID, '_fecha_meta', true);
+
+	wp_nonce_field(__FILE__, '_fecha_meta_nonce');
+	
+	echo "<input type='text' class='[ widefat ]' name='_fecha_meta' value='$fecha' />";
+
+}// metabox_fecha
+
+/**
+* Display metabox in page or post type
+* @param obj $post
+**/
+function metabox_texto_complementario( $post ){
+
+	$texto_complementario = get_post_meta($post->ID, '_texto_complementario_meta', true);
+
+	wp_nonce_field(__FILE__, '_texto_complementario_meta_nonce');
+
+	echo "<textarea class='[ widefat ]' name='_texto_complementario_meta'>$texto_complementario</textarea>";
+
+}// metabox_texto_complementario
 
 	
 
@@ -62,14 +111,14 @@ function metabox_coordenadas($post){
 
 	add_action('save_post', function( $post_id ){
 
-		save_metabox_coordenadas( $post_id );
+		save_metaboxes_foto_jg( $post_id );
 		
 	});
 
 	/**
 	* Save the metaboxes for post type "Productos"
 	**/
-	function save_metabox_coordenadas( $post_id ){
+	function save_metaboxes_foto_jg( $post_id ){
 		
 		// Latitud
 		if ( isset($_POST['_lat_meta']) and check_admin_referer( __FILE__, '_lat_meta_nonce') ){
@@ -79,6 +128,18 @@ function metabox_coordenadas($post){
 		if ( isset($_POST['_lng_meta']) and check_admin_referer( __FILE__, '_lng_meta_nonce') ){
 			update_post_meta($post_id, '_lng_meta', $_POST['_lng_meta']);
 		}
+		// Texto complementario
+		if ( isset($_POST['_texto_complementario_meta']) and check_admin_referer( __FILE__, '_texto_complementario_meta_nonce') ){
+			update_post_meta($post_id, '_texto_complementario_meta', $_POST['_texto_complementario_meta']);
+		}
+		// Lugar
+		if ( isset($_POST['_lugar_meta']) and check_admin_referer( __FILE__, '_lugar_meta_nonce') ){
+			update_post_meta($post_id, '_lugar_meta', $_POST['_lugar_meta']);
+		}
+		// Fecha
+		if ( isset($_POST['_fecha_meta']) and check_admin_referer( __FILE__, '_fecha_meta_nonce') ){
+			update_post_meta($post_id, '_fecha_meta', $_POST['_fecha_meta']);
+		}
 
-	}// save_metabox_coordenadas
+	}// save_metaboxes_foto_jg
 	
