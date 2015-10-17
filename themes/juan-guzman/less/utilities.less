@@ -16,22 +16,32 @@
 .padding-bottom{ padding-bottom: @padding-base-vertical; }
 
 .padding-top-bottom{
-  padding-top: @padding-base-horizontal;
-  padding-bottom: @padding-base-horizontal;
+  padding-top: @padding-base-vertical; padding-bottom: @padding-base-vertical;
+}
+.padding-top-bottom--large{
+  padding-top: @padding-large-vertical; padding-bottom: @padding-large-vertical;
 }
 
 //Border
-.border-bottom--primary{ border-bottom: 5px solid @brand-primary;}
+.border-bottom{
+  border-bottom-width: 1; border-bottom-style: solid; border-bottom-color: @dark;
+}
 
-.border-bottom--dotted{ border-bottom: 2px dotted @dark;}
-.border-bottom--dotted--light{ border-bottom: 2px dotted @light;}
+.border-bottom--primary{ border-bottom-color: @brand-primary; }
+.border-bottom--light{ border-bottom-color: @light; }
+
+.border-bottom--dotted{ border-bottom-style: dotted; }
+
 
 //Margin
 .no-margin{ margin: 0; }
+.no-margin-left{ margin-left: 0;}
 
-.margin-left--0{ margin-left: 0;}
+.margin-auto{
+  margin-left: auto; margin-right: auto;
+}
 
-.margin-auto{ margin: auto; }
+.margin-bottom{ margin-bottom: @padding-base-vertical; }
 
 
 
@@ -97,3 +107,15 @@
 .affix {
   position: fixed;
 }
+
+
+
+// Positions
+// -------------------------
+
+.relative{ position: relative; }
+.absolute{ position: absolute; }
+
+.absolute-bottom--0{ bottom: 0; }
+
+.absolute-left--0{ left: 0; }

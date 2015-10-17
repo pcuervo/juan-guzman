@@ -15,6 +15,13 @@
 
 	<div class="[ container-fluid ]">
 		<div class="[ row ]">
+			<a href="#" class="btn__corner">
+				<div class="[ text--bordered ][ text-center ]">
+					<p><em>#SabíasQue</em></p>
+				</div>
+			</a>
+		</div>
+		<div class="[ row ]">
 			<div class="[ col-xs-12 col-md-6 col-md-offset-3  ]">
 				<p><strong><?php echo get_the_title() ?>.</strong> <?php echo $lugar . ', ' . $fecha ?>.</p>
 			</div>
@@ -26,7 +33,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
+	</section>
 
 <?php get_footer(); ?>

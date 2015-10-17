@@ -42,8 +42,6 @@ function footer_scripts(){
 				displayStreetViewImage( '.street-view-img', lat, lng, 600, 300 );
 
 			<?php endif; ?>
-
-<?php  ?>
 		</script>
 <?php
 	endif;
