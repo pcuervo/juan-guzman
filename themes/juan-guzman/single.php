@@ -14,19 +14,33 @@
     </style>
 
 	<section>
-	<div class="[ text-right ]">
-		<div>
-			<a href="" class="[ bg-gray-light ] inline-block  [ padding--xs ]">
-				<i class=" [ fa fa-facebook-official ]"></i>
-			</a>
-		</div>	
-		<div>
-			<a href="" class="[ bg-gray-xlight ]  inline-block [ padding--xs ]">
-				<i class="[ fa fa-twitter ]"></i>
+		<div class="[ text-right ]">
+			<div>
+				<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
+					<i class=" [ fa fa-facebook-official ]"></i>
+				</a>
+			</div>	
+			<div>
+				<a href="" class="[ bg-gray-xlight ] [ btn-social ] [ padding--xs inline-block ]">
+					<i class="[ fa fa-twitter ]"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	
+	<section>
+	
+		<div class=" [ col-xs-6 ]">
+			<a href="" class="[ bg-gray-light ] [ btn-social ] [ text-left padding--xs inline-block ]">
+				<span class=" [ glyphicon glyphicon-chevron-left ]"></span>
 			</a>
 		</div>
-	</div>
-
+		<div class=" [ col-xs-6 ]">
+			<a href="" class="[ bg-gray-light ] [ btn-social ] [ text-right padding--xs inline-block ]">
+				<span class=" [ glyphicon glyphicon-chevron-right ]"></span>
+			</a>
+		</div>
+		
 	</section>
 
 	<div class="[ container-fluid ]">

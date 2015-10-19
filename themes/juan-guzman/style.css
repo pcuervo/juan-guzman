@@ -3498,6 +3498,10 @@ fieldset[disabled] .btn-danger.active {
 .btn-squared {
   padding: 18px;
 }
+.btn-social {
+  width: 35px;
+  height: 35px;
+}
 .btn-bordered {
   border-left: 1px solid #d91803;
   border-right: 1px solid #d91803;
