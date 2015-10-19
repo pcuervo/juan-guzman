@@ -13,6 +13,22 @@
       #mapa { height: 100%; }
     </style>
 
+	<section>
+	<div class="[ text-right ]">
+		<div>
+			<a href="" class="[ bg-gray-light ] inline-block  [ padding--xs ]">
+				<i class=" [ fa fa-facebook-official ]"></i>
+			</a>
+		</div>	
+		<div>
+			<a href="" class="[ bg-gray-xlight ]  inline-block [ padding--xs ]">
+				<i class="[ fa fa-twitter ]"></i>
+			</a>
+		</div>
+	</div>
+
+	</section>
+
 	<div class="[ container-fluid ]">
 		<div class="[ row ]">
 			<a href="#" class="btn__corner">

@@ -1428,6 +1428,14 @@ a.bg-gray:hover,
 a.bg-gray:focus {
   background-color: #808080;
 }
+.bg-gray-light {
+  background-color: #cccccc;
+  color: #ffffff;
+}
+.bg-gray-xlight {
+  background-color: #eeeeee;
+  color: #cccccc;
+}
 .bg-warning {
   background-color: #fcf8e3;
 }
@@ -6602,6 +6610,9 @@ buttonNHG VGVSSIHUIHUI .close {
 }
 .margin-bottom {
   margin-bottom: 18px;
+}
+.inline-block {
+  display: inline-block;
 }
 .circle {
   width: 200px;

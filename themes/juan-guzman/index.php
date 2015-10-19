@@ -58,13 +58,20 @@
 			</div>
 			<div class="[ row ]">
 				<div class="[ col-xs-12 text-center]">
-					<div class="text-center">
+					<div class="[ text-center ]">
 						<p class="[ padding--10 ]">La situaciòn econòmica de su paìs natal no fue propicia para su desenvlvimiento en esa disciplina. Las producciones de una pequeña compañìa cinematogràfica le dieron oportunidad de aprender otros oficios.</p>
 						<span class="[ color-brand-primary text-center ]">&#8595;</span>
 					</div>		
 				</div>
 			</div>
 		</div>
+	</section>
+	
+	<section>
+	<a href="" class="color-gray">
+		<span class=" icon-facebook"></span>
+	</a>
+		
 	</section>
 
 <?php get_footer(); ?>
