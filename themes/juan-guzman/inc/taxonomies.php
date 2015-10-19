@@ -7,19 +7,18 @@
 add_action( 'init', 'custom_taxonomies_callback', 0 );
 function custom_taxonomies_callback(){
 
-	// BRANDS
-	if( ! taxonomy_exists('marcas')){
+	// DÉCADA
+	if( ! taxonomy_exists('decada')){
 
 		$labels = array(
-			'name'              => 'Marca',
-			'singular_name'     => 'Marca',
+			'name'              => 'Década',
+			'singular_name'     => 'Década',
 			'search_items'      => 'Buscar',
 			'all_items'         => 'Todos',
-			'edit_item'         => 'Editar marca',
-			'update_item'       => 'Actualizar marca',
-			'add_new_item'      => 'Nueva marca',
-			'new_item_name'     => 'Nombre nuevo marca',
-			'menu_name'         => 'Marcas'
+			'edit_item'         => 'Editar década',
+			'update_item'       => 'Actualizar década',
+			'add_new_item'      => 'Nueva década',
+			'menu_name'         => 'Décadas'
 		);
 		$args = array(
 			'hierarchical'      => true,
@@ -28,42 +27,16 @@ function custom_taxonomies_callback(){
 			'show_admin_column' => true,
 			'show_in_nav_menus' => true,
 			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'marca' ),
+			'rewrite'           => array( 'slug' => 'decada' ),
 		);
 
-		register_taxonomy( 'marcas', 'productos', $args );
+		register_taxonomy( 'decada', 'foto-jg', $args );
 	}
 
-	// Insert taxonomy terms
-	// insert_taxonomy_terms();
+	// Taxonomy terms
+	insert_decada_taxonomy_terms();
 
 }// custom_taxonomies_callback
-
-// /*
-//  * Insert dynamic taxonomy terms after a post has been created/saved.
-//  */
-// function update_taxonomies(){
-// 	global $post;
-
-// 	// Exist of post doesn't exist or it has been moved to trash
-// 	if( NULL === $post || 'trash' === get_post_status( $post->ID ) ) {
-// 		return;
-// 	}
-
-// 	switch ( $post->post_type ) {
-// 		case 'marcas':
-// 			insert_dynamic_taxonomy_term( $post->post_title, 'marcas' );
-// 			break;
-// 		case 'productos':
-// 			insert_dynamic_taxonomy_term( $post->post_title, 'productos-receta' );
-// 			break;
-// 		default:
-// 			# code...
-// 			break;
-// 	}
-	
-// }// update_taxonomies
-// add_action('save_post', 'update_taxonomies');
 
 // /*
 //  * Insert  $new_term to $taxonomy based on the title of new post
@@ -71,13 +44,15 @@ function custom_taxonomies_callback(){
 //  * @param string $new_term
 //  * @param string $taxonomy
 //  */
-// function insert_dynamic_taxonomy_term( $new_term, $taxonomy ){
+function insert_decada_taxonomy_terms(){
 
-// 	$term = term_exists( $new_term, $taxonomy );
-// 	if ( FALSE !== $term && NULL !== $term ) {
-// 		return;
-// 	}
-// 	wp_insert_term( $new_term, $taxonomy );
+	$decadas = array( 1930, 1940, 1950, 1960 );
+	foreach ( $decadas as $decada ) {
+		$term = term_exists( $decada, 'decada' );
+		if ( FALSE !== $term && NULL !== $term ) continue;
 
-// }// insert_dynamic_taxonomy_term
+		wp_insert_term( $decada, 'decada' );
+	}
+	
+}// insert_decada_taxonomy_terms
 

@@ -8,6 +8,7 @@
 	* Define paths to javascript, styles, theme and site.
 	**/
 	define( 'JSPATH', get_template_directory_uri() . '/js/' );
+	define( 'BOOTSTRAP_PATH', get_template_directory_uri() . '/dist/' );
 	define( 'CSSPATH', get_template_directory_uri() . '/css/' );
 	define( 'THEMEPATH', get_template_directory_uri() . '/' );
 	define( 'SITEURL', site_url('/') );
@@ -45,11 +46,13 @@
 		// scripts
 		wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 		wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
+		wp_enqueue_script( 'bootstrap_js', BOOTSTRAP_PATH.'/js/bootstrap.js', array('plugins'), '1.0', true );
 
 		// localize scripts
 		wp_localize_script( 'functions', 'ajax_url', admin_url('admin-ajax.php') );
 		wp_localize_script( 'functions', 'site_url', site_url() );
 		wp_localize_script( 'functions', 'theme_url', THEMEPATH );
+		wp_localize_script( 'functions', 'allPhotosInfo', get_photos_info() );
 
 
 		// styles
@@ -103,8 +106,122 @@ function print_title(){
 	#SET/GET FUNCTIONS
 \*------------------------------------*/
 
+/**
+ * Jalar la latitud de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $lat
+ */
+function get_lat( $post_id ){
+	return get_post_meta($post_id, '_lat_meta', true);
+}// get_lat
 
+/**
+ * Jalar la longitud de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $lng
+ */
+function get_lng( $post_id ){
+	return get_post_meta($post_id, '_lng_meta', true);
+}// get_lng
 
+/**
+ * Jalar heading de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $heading
+ */
+function get_heading( $post_id ){
+
+	$heading =  get_post_meta($post_id, '_heading_meta', true);
+	if( $heading == '' ) return 0; 
+
+	return $heading;
+
+}// get_heading
+
+/**
+ * Jalar lugar de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $lugar
+ */
+function get_lugar( $post_id ){
+	return get_post_meta($post_id, '_lugar_meta', true);
+}// get_lugar
+
+/**
+ * Jalar fecha de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $fecha
+ */
+function get_fecha( $post_id ){
+	return get_post_meta($post_id, '_fecha_meta', true);
+}// get_fecha
+
+/**
+ * Jalar si es foto aérea de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $vista_aerea
+ */
+function get_vista_aerea( $post_id ){
+	
+	$vista_aerea = get_post_meta($post_id, '_vista_aerea_meta', true);
+
+	if( $vista_aerea == 'si' ) return 1;
+
+	return 0;
+
+}// get_vista_aerea
+
+/**
+ * Jalar fecha de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $decada
+ */
+function get_decada( $post_id ){
+	$terms = wp_get_post_terms( $post_id, 'decada' );
+
+	if( empty( $terms ) ) return '-';
+
+	return $terms[0]->name;
+}// get_decada
+
+/**
+ * Regresa toda la información de las fotos de Juan Guzmán
+ * @return JSON $infoPhotos
+ */
+function get_photos_info(){
+
+	$info_photos = array();
+	$args_apas = array(
+		'post_type' 		=> 'foto-jg',
+		'posts_per_page' 	=> -1
+	);
+
+	$query_mapas = new WP_Query( $args_apas );
+	if ( $query_mapas->have_posts() ) : while ( $query_mapas->have_posts() ) : $query_mapas->the_post();
+		global $post;
+
+		$lat = get_lat( $post->ID );
+		$lng = get_lng( $post->ID );
+		$lugar = get_lugar( $post->ID );
+		$fecha = get_fecha( $post->ID );
+		$decada = get_decada( $post->ID );
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+		$info_photos[$post->post_name] = array(
+			'title'			=> $post->post_title,
+			'lat'			=> $lat,
+			'lng'			=> $lng,
+			'lugar'			=> $lugar,
+			'fecha'			=> $fecha,
+			'decada'		=> $decada,
+			'img_url'		=> $image[0],
+			'permalink'		=> get_permalink( $post->ID )
+			);
+
+	endwhile; endif; wp_reset_query();
+
+	return json_encode( $info_photos );
+
+}// get_photos_info
 
 
 /*------------------------------------*\
