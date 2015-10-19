@@ -50,3 +50,12 @@
 	</head>
 
 	<body>
+
+		<?php if ( is_singular() ){ ?>
+
+			<header>
+				<h1 class="[ bg-primary ][ header__title ][ padding no-margin margin-auto ][ text-uppercase text-center ][ inline ]"><strong>Juan Guzmán</strong> <i class="[ fa fa-book ]"></i></h1>
+			</header>
+
+
+		<?php } ?>

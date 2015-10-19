@@ -5954,6 +5954,12 @@ buttonNHG VGVSSIHUIHUI .close {
   border: 0;
   -webkit-appearance: none;
 }
+header {
+  height: 46px;
+}
+header .header__title {
+  font-size: 19px;
+}
 .img__xs-100 {
   width: 20px;
   height: inherit;
@@ -6708,6 +6714,15 @@ buttonNHG VGVSSIHUIHUI .close {
 }
 .absolute-left--0 {
   left: 0;
+}
+.block {
+  display: block;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
 }
 @-ms-viewport {
   width: device-width;
