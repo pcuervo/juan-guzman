@@ -15,7 +15,7 @@ add_action('init', function(){
 	//		'post_status' => 'publish',
 	//		'post_title'  => 'mapa',
 	//		'post_name'   => 'mapa',
-			'post_type'   => 'page'
+	//		'post_type'   => 'page'
 	//	);
 	//	wp_insert_post( $page, true );
 	//}

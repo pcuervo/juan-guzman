@@ -34,10 +34,13 @@
 				Mapa
 			</a>
 		</div>
-		<div class="[ bg-dark ][ padding ]">
-			<h2 class="[ color-light text-center ]"><span class="[ border-bottom border-bottom--primary ]">HANS</span> GUTMANN</h2>
-			<p class="[ padding--10 ] [ text--white ]">El primer nombre de Juan Guzmàn fue Hans Gutmann. Nacido en <u>Colonia, Alemania,</u> en 1911. Hizo estudios en ingenierìa metalùrgica.</p>
-			<span class="[ text--red  text--center] [ glyphicon glyphicon-arrow-down ]"></span>
+		<div class="[ bg-dark ][ padding text-center ]">
+			<h2 class="[ color-light ]">
+				<span class="[ border-bottom border-bottom--primary ]">HANS</span> 
+				<span class="[ border-bottom border-bottom--primary ]">GUTMANN</span>
+			</h2>
+			<p class="[ text-center padding--10 ] [ color-light ]">El primer nombre de Juan Guzmàn fue Hans Gutmann. Nacido en <u>Colonia, Alemania,</u> en 1911. Hizo estudios en ingenierìa metalùrgica.</p>
+			<span class="[ color-brand-primary ]">&#8595;</span>
 		</div>
 	</section>
 
@@ -46,13 +49,19 @@
 		<div class="padding--10">
 			<div class="[ row ]">
 				<div class="[ col-xs-12 ]">
-					<h2 class="[ border__bottom--red ] [ margin--auto ]">SEGUNDA GUERRA MUNDIAL</h2>
+					<h2 class="[ color-gray ] [ text-center ]">
+						<span class="[ border-bottom border-bottom--primary ]">SEGUNDA </span>
+						<span class="[ border-bottom border-bottom--primary ]">GUERRA </span>
+						<span class="[ border-bottom border-bottom--primary ]">MUNDIAL</span>
+					</h2>
 				</div>
 			</div>
 			<div class="[ row ]">
-				<div class="[ col-xs-12 text--center]">
-					<p class="[ padding--10 ]">La situaciòn econòmica de su paìs natal no fue propicia para su desenvlvimiento en esa disciplina. Las producciones de una pequeña compañìa cinematogràfica le dieron oportunidad de aprender otros oficios.</p>
-					<span class="[ text--red  text--center] [ glyphicon glyphicon-arrow-down ]"></span>
+				<div class="[ col-xs-12 text-center]">
+					<div class="text-center">
+						<p class="[ padding--10 ]">La situaciòn econòmica de su paìs natal no fue propicia para su desenvlvimiento en esa disciplina. Las producciones de una pequeña compañìa cinematogràfica le dieron oportunidad de aprender otros oficios.</p>
+						<span class="[ color-brand-primary text-center ]">&#8595;</span>
+					</div>		
 				</div>
 			</div>
 		</div>
