@@ -31,6 +31,8 @@ function add_metaboxes_fotos_jg(){
 	add_meta_box( 'lugar', 'Lugar', 'metabox_lugar', 'foto-jg', 'advanced', 'high' );
 	add_meta_box( 'fecha', 'Fecha', 'metabox_fecha', 'foto-jg', 'advanced', 'high' );
 	add_meta_box( 'coordenadas', 'Coordenadas', 'metabox_coordenadas', 'foto-jg', 'advanced', 'high' );
+	add_meta_box( 'heading', 'Heading', 'metabox_heading', 'foto-jg', 'advanced', 'high' );
+	add_meta_box( 'vista_aerea', 'Vista aérea', 'metabox_vista_aerea', 'foto-jg', 'side', 'high' );
 
 }// add_metaboxes_PAGE
 
@@ -66,7 +68,6 @@ function metabox_coordenadas( $post ){
 function metabox_lugar( $post ){
 
 	$lugar = get_post_meta($post->ID, '_lugar_meta', true);
-
 	wp_nonce_field(__FILE__, '_lugar_meta_nonce');
 	
 	echo "<input type='text' class='[ widefat ]' name='_lugar_meta' value='$lugar' />";
@@ -101,6 +102,35 @@ function metabox_texto_complementario( $post ){
 
 }// metabox_texto_complementario
 
+/**
+* Display metabox in page or post type
+* @param obj $post
+**/
+function metabox_heading( $post ){
+
+	$heading = get_post_meta($post->ID, '_heading_meta', true);
+
+	wp_nonce_field(__FILE__, '_heading_meta_nonce');
+	
+	echo "<input type='text' class='[ widefat ]' name='_heading_meta' value='$heading' />";
+
+}// metabox_heading
+
+/**
+* Display metabox in page or post type
+* @param obj $post
+**/
+function metabox_vista_aerea( $post ){
+
+	$vista_aerea = get_post_meta($post->ID, '_vista_aerea_meta', true);
+
+	wp_nonce_field(__FILE__, '_vista_aerea_meta_nonce');
+	
+	$checked = $vista_aerea == 'si' ? 'checked' : '';
+	echo "<input type='checkbox' class='[ widefat ]' name='_vista_aerea_meta' value='si' $checked />";
+	echo "<label> si</label>";
+
+}// metabox_vista_aerea
 	
 
 
@@ -119,7 +149,7 @@ function metabox_texto_complementario( $post ){
 	* Save the metaboxes for post type "Productos"
 	**/
 	function save_metaboxes_foto_jg( $post_id ){
-		
+	
 		// Latitud
 		if ( isset($_POST['_lat_meta']) and check_admin_referer( __FILE__, '_lat_meta_nonce') ){
 			update_post_meta($post_id, '_lat_meta', $_POST['_lat_meta']);
@@ -139,6 +169,17 @@ function metabox_texto_complementario( $post ){
 		// Fecha
 		if ( isset($_POST['_fecha_meta']) and check_admin_referer( __FILE__, '_fecha_meta_nonce') ){
 			update_post_meta($post_id, '_fecha_meta', $_POST['_fecha_meta']);
+		}
+		// Heading
+		if ( isset($_POST['_heading_meta']) and check_admin_referer( __FILE__, '_heading_meta_nonce') ){
+			update_post_meta($post_id, '_heading_meta', $_POST['_heading_meta']);
+		}
+		// Vista aérea
+		if ( isset($_POST['_vista_aerea_meta']) and check_admin_referer( __FILE__, '_vista_aerea_meta_nonce') ){
+
+			update_post_meta($post_id, '_vista_aerea_meta', $_POST['_vista_aerea_meta']);
+		} else {
+			update_post_meta($post_id, '_vista_aerea_meta', 'no');
 		}
 
 	}// save_metaboxes_foto_jg

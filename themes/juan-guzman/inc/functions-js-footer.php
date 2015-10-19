@@ -36,10 +36,10 @@ function footer_scripts(){
 				// Pasar a función
 				var lat = <?php echo get_lat( get_the_ID() ); ?>;
 				var lng = <?php echo get_lng( get_the_ID() ); ?>;
-				var mapa = createEmptyMap();
-				var markers = [ createMarker( mapa, lat, lng ) ];
-				autoCenter( mapa, markers );
-				displayStreetViewImage( '.street-view-img', lat, lng, 600, 300 );
+				var isAerial = <?php echo get_vista_aerea( get_the_ID() ) ?>;
+				var heading = <?php echo get_heading( get_the_ID() ) ?>;
+
+				showSingleMap( lat, lng, heading, isAerial );			
 
 			<?php endif; ?>
 		</script>
