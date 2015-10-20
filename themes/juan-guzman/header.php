@@ -55,8 +55,23 @@
 
 		<?php if ( is_singular() ){ ?>
 
-			<header class="[ text-center ]">
-				<h1 class="[ bg-primary ][ header__title ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]"><strong>Juan Guzmán</strong>&nbsp;&nbsp;&nbsp;&nbsp;<i class="[ fa fa-book ]"></i></h1>
+			<header class="[ text-center ][ container ]">
+				<div class="[ row ]">
+					<span class="[ text-left ][ col-xs-8 ]">
+						<h1 class="[ bg-primary ][ header__title ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]">
+							<a class="[ color-light ]" href="<?php echo site_url(); ?>">
+								<strong>Juan Guzmán</strong>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								<i class="[ fa fa-book ]"></i>
+							</a>
+						</h1>
+					</span>
+					<span class="[ text-right ][ col-xs-4 ]">
+						<a href="<?php echo site_url('foto-jg'); ?>" class="[ btn btn-primary btn-xs ][ header__back ]">
+							regresar
+						</a>
+					</span>
+				</div><!-- row -->
 			</header>
 
 		<?php } ?>
