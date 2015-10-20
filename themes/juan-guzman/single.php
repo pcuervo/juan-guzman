@@ -25,16 +25,34 @@
 	<section>
 		<div class="[ text-right ]">
 			<div>
-				<a href="" class="[ bg-gray-light ] inline-block  [ padding--xs ]">
+				<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
 					<i class=" [ fa fa-facebook-official ]"></i>
 				</a>
 			</div>
 			<div>
-				<a href="" class="[ bg-gray-xlight ]  inline-block [ padding--xs ]">
+				<a href="" class="[ bg-gray-xlight ] [ btn-social ] [ padding--xs inline-block ]">
 					<i class="[ fa fa-twitter ]"></i>
 				</a>
 			</div>
 		</div>
+	</section>
+
+	<section>
+		<div class=" [ col-xs-6 ] [ text-right padding-none]">
+			<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
+				<span class=" [ glyphicon glyphicon-chevron-left ]"></span>
+			</a>
+		</div>
+		<div class=" [ col-xs-6 ] [ text-left ]">
+			<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
+				<span class=" [ glyphicon glyphicon-chevron-right ]"></span>
+			</a>
+	</section>
+
+	<section>
+		<a class="[ btn btn-primary btn-squared ]" href="#">
+			<span class="icon-street"></span>
+		</a>
 	</section>
 
 	<div class="[ container-fluid ]">
