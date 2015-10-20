@@ -3515,6 +3515,14 @@ fieldset[disabled] .btn-danger.active {
     padding: 9px 13px;
   }
 }
+.btn-decada {
+  height: 50vh;
+  border-top: 5vh solid;
+}
+.map-bar {
+  position: fixed;
+  bottom: 0px;
+}
 .btn-bordered {
   border-left: 1px solid #d91803;
   border-right: 1px solid #d91803;

@@ -114,7 +114,7 @@
 			<div class="[ row ]">
 				<div class="[ col-xs-12 text-center]">
 					<h2 class="[ color-gray ] [ text-center ]">
-						<span class="[ border-bottom border-bottom--primary ]">METROPOLI</span>
+						<span class="[ border-bottom border-bottom--primary ]">METRÒPOLI</span>
 					</h2>		
 				</div>
 			</div>

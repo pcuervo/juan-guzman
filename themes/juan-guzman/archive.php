@@ -13,10 +13,10 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-12">
-				<div id="mapa" style="height: 500px;"></div>
+				<div id="mapa" style="height: 900px;"></div>
 			</div>
-			<div class="[ col-xs-12 ][ filtro-decada ][ text-center ]">
-				<a class="[ btn btn-default ]" href="#" data-decada="1930">1930</a>
+			<div class="[ col-xs-12 ][ filtro-decada ][ text-center ] map-bar">
+				<a class="[ btn btn-default btn-decada]" href="#" data-decada="1930">1930</a>
 				<a class="[ btn btn-default ]" href="#" data-decada="1940">1940</a>
 				<a class="[ btn btn-default ]" href="#" data-decada="1950">1950</a>
 				<a class="[ btn btn-default ]" href="#" data-decada="1960">1960</a>
