@@ -10,7 +10,7 @@ var $=jQuery.noConflict();
  * @return type name
 **/
 function exampleFunction( ){
-	
+
 }// exampleFunction
 
 
@@ -42,7 +42,7 @@ function createEmptyMap( isAerial ){
     var styledMap = new google.maps.StyledMapType( styles, { name: "Styled Map" } );
     map.mapTypes.set('map_style', styledMap);
     map.setMapTypeId('map_style');
-    
+
     return map;
 
 }// createEmptyMap
@@ -51,7 +51,7 @@ function createMarker( mapa, lat, lng, decada ){
 
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng( lat, lng ),
-        map: mapa, 
+        map: mapa,
         category: decada
     });
 
@@ -60,7 +60,7 @@ function createMarker( mapa, lat, lng, decada ){
 }// createMarker
 
 function addAllMarkers(){
-    
+
     var mapa = createEmptyMap( false );
     var markers = [];
     // allPhotosInfo viene de WP con wp_localize_script
@@ -86,7 +86,7 @@ function showSingleMap( lat, lng, heading, isAerial ){
     var markers = [ createMarker( mapa, lat, lng ) ];
     autoCenter( mapa, markers );
 
-    if ( 1 != isAerial ) displayStreetViewImage( '.street-view-img', lat, lng, 600, 300, heading );
+    if ( 1 != isAerial ) displayStreetViewImage( '.street-view-img', lat, lng, 640, 320, heading );
 
 }// showSingleMap
 
@@ -95,7 +95,7 @@ function addDecadaFilter( mapa, markers ){
     $('.filtro-decada a').click(function(){
         var decada = $(this).data('decada');
         filterMarkersDecada( mapa, markers, decada );
-    }); 
+    });
 
 }// addDecadaFilter
 
@@ -151,7 +151,7 @@ function createInfoWindow( mapa, marker, permalink, imgUrl ){
         infoWindows.open( mapa, this );
     });
     // google.maps.event.addListener(marker, 'mouseout', function() {
-    //     infoWindows.close();       
+    //     infoWindows.close();
     // });
 
 }// createInfoWindow

@@ -1,6 +1,28 @@
 //
 // Navs
 // --------------------------------------------------
+.decades{
+  display: block;
+  width: 100%; height: 40px;
+  position: fixed; left: 0; bottom: 0;
+  background: @light;
+  z-index: @zindex-navbar-fixed;
+}
+
+.decades__item{
+  display: inline-block;
+  width: 20%;
+  color: @dark;
+  font-size: 12px;
+  text-align: center;
+}
+
+.decades__item--30{}
+.decades__item--40{}
+.decades__item--50{}
+.decades__item--60{}
+.decades__item--all{}
+
 
 
 // Base class

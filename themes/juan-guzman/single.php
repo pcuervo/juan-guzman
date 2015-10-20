@@ -1,80 +1,79 @@
-<?php get_header(); ?>
-
 <?php
+	get_header();
+
 	global $post;
 
-	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-	$fecha = get_fecha( $post->ID );
-	$lugar = get_lugar( $post->ID );
+	$image 		= wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+	$fecha 		= get_fecha( $post->ID );
+	$lugar 		= get_lugar( $post->ID );
+	$sabias_que = get_sabias_que( $post->ID );
+
 ?>
-	<section class="[ main-image ]">
-		<img class="[ img-responsive ][ margin-bottom ]" src="<?php echo $image[0]; ?>">
-		<article class="[ ficha-tecnica ]">
-			<p class="[ text-center ]">
-				<strong><?php the_title(); ?></strong><br/>
-				<?php echo $lugar; ?>, <?php echo $fecha; ?>
-			</p>
-		</article>
+	<section class="[ main-image ][ container-fluid ][ no-padding margin-bottom ]">
+		<img class="[ img-responsive ][ margin-auto ]" src="<?php echo $image[0]; ?>">
 	</section>
 
-	<article>
-		<?php the_content(); ?>
-	</article>
+	<div class="[ container-fluid ][ no-padding ]">
 
+		<div class="[ clearfix ]">
 
-	<section>
-		<div class="[ text-right ]">
-			<div>
-				<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
-					<i class=" [ fa fa-facebook-official ]"></i>
+			<section class="[ col-xs-1 ][ col-sm-offset-1 col-md-offset-2 ][ no-padding ]">
+				<a href="" class="[ bg-gray-light ][ btn--square ][ pull-right ]">
+					<span class=" [ fa fa-chevron-left ]"></span>
 				</a>
-			</div>
-			<div>
-				<a href="" class="[ bg-gray-xlight ] [ btn-social ] [ padding--xs inline-block ]">
+			</section>
+
+			<section class="[ col-xs-10 col-sm-8 col-md-6 ]">
+
+				<article class="[ ficha-tecnica ]">
+					<p class="[ text-center ]">
+						<strong><?php the_title(); ?></strong><br/>
+						<?php echo $lugar; ?>, <?php echo $fecha; ?>
+					</p>
+				</article>
+
+				<article>
+					<?php the_content(); ?>
+				</article>
+
+			</section>
+
+			<section class="[ col-xs-1 ][ no-padding ]">
+				<a href="" class="[ bg-gray-light ][ btn--square ]">
+					<span class="[ fa fa-chevron-right ]"></span>
+				</a>
+				<a href="" class="[ bg-gray-xlight ][ btn--square ]">
+					<i class="[ fa fa-facebook-official ]"></i>
+				</a>
+				<a href="" class="[ bg-gray-light ][ btn--square ]">
 					<i class="[ fa fa-twitter ]"></i>
 				</a>
-			</div>
-		</div>
-	</section>
+			</section>
 
-	<section>
-		<div class=" [ col-xs-6 ] [ text-right padding-none]">
-			<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
-				<span class=" [ glyphicon glyphicon-chevron-left ]"></span>
-			</a>
-		</div>
-		<div class=" [ col-xs-6 ] [ text-left ]">
-			<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
-				<span class=" [ glyphicon glyphicon-chevron-right ]"></span>
-			</a>
-	</section>
+		</div><!-- clearfix -->
 
-	<section>
-		<a class="[ btn btn-primary btn-squared ]" href="#">
-			<span class="icon-street"></span>
-		</a>
-	</section>
+		<div class="[ clearfix ][ margin-bottom ]">
+			<section class="[ street-view ][ relative ][ no-padding ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
+				<div class="[ img-responsive street-view-img ]"></div>
+				<a class="[ btn btn-primary btn-sm ][ absolute absolute-top--0 absolute-right--0 ]" href="#">
+					<i class="[ fa fa-street-view fa-2x ]"></i>
+				</a>
+			</section>
+		</div><!-- clearfix -->
 
-	<div class="[ container-fluid ]">
-		<div class="[ row ]">
-			<a href="#" class="btn__corner">
-				<div class="[ text--bordered ][ text-center ]">
-					<p><em>#SabíasQue</em>&nbsp;&nbsp;&nbsp;&nbsp; <i class="[ fa fa-twitter ]"></i> </p>
-				</div>
-			</a>
-		</div>
-		<div class="[ row ]">
-			<div class="[ col-xs-12 col-md-6 col-md-offset-3  ]">
-				<p><strong><?php echo get_the_title() ?>.</strong> <?php echo $lugar . ', ' . $fecha ?>.</p>
+		<div class="[ clearfix ]">
+			<section class="[ text-center ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
+				<p><em>#SabíasQue</em>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i class="[ fa fa-twitter ]"></i></a> </p>
+				<p><?php echo $sabias_que; ?></p>
+			</section>
+		</div><!-- clearfix -->
+
+		<section class="[ row ]">
+			<div class="">
+				<div id="mapa" class="[ map map--mini ]"></div>
 			</div>
-			<div class="[ col-xs-12 col-md-6 col-md-offset-3 ]">
-				<div id="mapa" style="height: 500px;"></div>
-			</div>
-			<div class="[ col-xs-12 ]">
-				<div class="[ street-view-img ]">
-				</div>
-			</div>
-		</div>
-	</section>
+		</section>
+
+	</div>
 
 <?php get_footer(); ?>

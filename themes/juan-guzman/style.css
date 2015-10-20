@@ -257,6 +257,9 @@ th {
   src: url('fonts/glyphicons-halflings-regular.eot');
   src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+.icon-street:before {
+  content: "\e800";
+}
 .glyphicon {
   position: relative;
   top: 1px;
@@ -1285,6 +1288,7 @@ h2 {
 }
 p {
   margin: 0 0 12.5px;
+  font-size: 16px;
   font-family: "cordale", Georgia, "Times New Roman", Times, serif;
 }
 .lead {
@@ -1518,10 +1522,10 @@ abbr[data-original-title] {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 12.5px 25px;
+  padding-left: 12.5px;
   margin: 0 0 25px;
   font-size: 22.5px;
-  border-left: 5px solid #cccccc;
+  border-left: 2px solid #cccccc;
 }
 blockquote p:last-child,
 blockquote ul:last-child,
@@ -3498,9 +3502,18 @@ fieldset[disabled] .btn-danger.active {
 .btn-squared {
   padding: 18px;
 }
-.btn-social {
-  width: 35px;
-  height: 35px;
+.btn--square {
+  display: block;
+  width: 28px;
+  height: 28px;
+  padding: 10px 6px 30px 6px;
+}
+@media (min-width: 768px) {
+  .btn--square {
+    width: 40px;
+    height: 40px;
+    padding: 11px 7px;
+  }
 }
 .btn-bordered {
   border-left: 1px solid #d91803;
@@ -4087,6 +4100,23 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .input-group-btn:last-child > .btn-group {
   z-index: 2;
   margin-left: -1px;
+}
+.decades {
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #ffffff;
+  z-index: 1030;
+}
+.decades__item {
+  display: inline-block;
+  width: 20%;
+  color: #000000;
+  font-size: 12px;
+  text-align: center;
 }
 .nav {
   margin-bottom: 0;
@@ -5977,9 +6007,11 @@ header .header__title {
   position: relative;
   top: 8px;
 }
-.img__xs-100 {
-  width: 20px;
-  height: inherit;
+.main-image img {
+  max-height: 80vh;
+}
+.map--mini {
+  display: none;
 }
 .modal-open {
   overflow: hidden;
@@ -6573,6 +6605,9 @@ header .header__title {
     bottom: 20px;
   }
 }
+.no-padding {
+  padding: 0;
+}
 .padding {
   padding: 18px 36px;
 }
@@ -6628,6 +6663,9 @@ header .header__title {
 }
 .inline-block {
   display: inline-block;
+}
+.inline {
+  display: inline;
 }
 .circle {
   width: 200px;
@@ -6728,6 +6766,12 @@ header .header__title {
 }
 .absolute {
   position: absolute;
+}
+.absolute-top--0 {
+  top: 0;
+}
+.absolute-right--0 {
+  right: 0;
 }
 .absolute-bottom--0 {
   bottom: 0;

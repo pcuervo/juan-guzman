@@ -132,7 +132,7 @@ function get_lng( $post_id ){
 function get_heading( $post_id ){
 
 	$heading =  get_post_meta($post_id, '_heading_meta', true);
-	if( $heading == '' ) return 0; 
+	if( $heading == '' ) return 0;
 
 	return $heading;
 
@@ -162,14 +162,19 @@ function get_fecha( $post_id ){
  * @return int $vista_aerea
  */
 function get_vista_aerea( $post_id ){
-	
 	$vista_aerea = get_post_meta($post_id, '_vista_aerea_meta', true);
-
 	if( $vista_aerea == 'si' ) return 1;
-
 	return 0;
-
 }// get_vista_aerea
+
+/**
+ * Jalar fecha de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $fecha
+ */
+function get_sabias_que( $post_id ){
+	return get_post_meta($post_id, '_texto_complementario_meta', true);
+}// get_fecha
 
 /**
  * Jalar fecha de un post tipo 'foto-jg'
