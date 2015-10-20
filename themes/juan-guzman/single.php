@@ -1,23 +1,47 @@
 <?php get_header(); ?>
 
-<?php 
-	global $post; 
+<?php
+	global $post;
 
 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
 	$fecha = get_fecha( $post->ID );
 	$lugar = get_lugar( $post->ID );
 ?>
+	<section class="[ main-image ]">
+		<img class="[ img-responsive ][ margin-bottom ]" src="<?php echo $image[0]; ?>">
+		<article class="[ ficha-tecnica ]">
+			<p class="[ text-center ]">
+				<strong><?php the_title(); ?></strong><br/>
+				<?php echo $lugar; ?>, <?php echo $fecha; ?>
+			</p>
+		</article>
+	</section>
 
-	<style type="text/css">
-      html, body { height: 100%; margin: 0; padding: 0; }
-      #mapa { height: 100%; }
-    </style>
+	<article>
+		<?php the_content(); ?>
+	</article>
+
+
+	<section>
+		<div class="[ text-right ]">
+			<div>
+				<a href="" class="[ bg-gray-light ] inline-block  [ padding--xs ]">
+					<i class=" [ fa fa-facebook-official ]"></i>
+				</a>
+			</div>
+			<div>
+				<a href="" class="[ bg-gray-xlight ]  inline-block [ padding--xs ]">
+					<i class="[ fa fa-twitter ]"></i>
+				</a>
+			</div>
+		</div>
+	</section>
 
 	<div class="[ container-fluid ]">
 		<div class="[ row ]">
 			<a href="#" class="btn__corner">
 				<div class="[ text--bordered ][ text-center ]">
-					<p><em>#SabíasQue</em></p>
+					<p><em>#SabíasQue</em>&nbsp;&nbsp;&nbsp;&nbsp; <i class="[ fa fa-twitter ]"></i> </p>
 				</div>
 			</a>
 		</div>

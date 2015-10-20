@@ -34,6 +34,8 @@
 		<meta name="msapplication-wide310x150logo" content="<?php echo THEMEPATH; ?>favicon/mstile-310x150.png" />
 		<meta name="msapplication-square310x310logo" content="<?php echo THEMEPATH; ?>favicon/mstile-310x310.png" />
 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 		<!--[if lt IE 9]>
 			<script src="js/html5shiv.js"></script>
@@ -53,9 +55,8 @@
 
 		<?php if ( is_singular() ){ ?>
 
-			<header>
-				<h1 class="[ bg-primary ][ header__title ][ padding no-margin margin-auto ][ text-uppercase text-center ][ inline ]"><strong>Juan Guzmán</strong> <i class="[ fa fa-book ]"></i></h1>
+			<header class="[ text-center ]">
+				<h1 class="[ bg-primary ][ header__title ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]"><strong>Juan Guzmán</strong>&nbsp;&nbsp;&nbsp;&nbsp;<i class="[ fa fa-book ]"></i></h1>
 			</header>
-
 
 		<?php } ?>
