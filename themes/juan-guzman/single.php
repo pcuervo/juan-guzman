@@ -10,20 +10,30 @@
 
 ?>
 	<section class="[ main-image ][ container-fluid ][ no-padding margin-bottom ]">
-		<img class="[ img-responsive ][ margin-auto ]" src="<?php echo $image[0]; ?>">
+		<div class="[ clearfix ]">
+			<div class="[ col-md-3 ][ hidden-xs hidden-sm ]">
+				<div class="embed-responsive embed-responsive-4by3">
+					<div id="mapa" class="[ map map--mini ][ embed-responsive-item ]"></div>
+				</div>
+			</div>
+			<div class="[ col-xs-12 col-sm-8 col-md-6 ][ col-sm-offset-2 col-md-offset-0 ][ no-padding ]">
+				<img class="[ img-responsive ][ margin-auto ]" src="<?php echo $image[0]; ?>">
+			</div>
+		</div>
 	</section>
+
+	<a href="<?php site_url(); ?>" class="[ col-xs-1 ][ bg-gray-light ][ btn--square ][ fixed top-50 absolute-left--0 ][ z-index-10 ]">
+		<span class=" [ fa fa-chevron-left ]"></span>
+	</a>
+	<a href="<?php site_url(); ?>" class="[ col-xs-1 ][ bg-gray-light ][ btn--square ][ fixed top-50 absolute-right--0 ][ z-index-10 ]">
+		<span class="[ fa fa-chevron-right ]"></span>
+	</a>
 
 	<div class="[ container-fluid ][ no-padding ]">
 
-		<div class="[ clearfix ]">
+		<div class="[ clearfix ][ margin-bottom--large ]">
 
-			<section class="[ col-xs-1 ][ col-sm-offset-1 col-md-offset-2 ][ no-padding ]">
-				<a href="" class="[ bg-gray-light ][ btn--square ][ pull-right ]">
-					<span class=" [ fa fa-chevron-left ]"></span>
-				</a>
-			</section>
-
-			<section class="[ col-xs-10 col-sm-8 col-md-6 ]">
+			<section class="[ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
 
 				<article class="[ ficha-tecnica ]">
 					<p class="[ text-center ]">
@@ -39,9 +49,6 @@
 			</section>
 
 			<section class="[ col-xs-1 ][ no-padding ]">
-				<a href="" class="[ bg-gray-light ][ btn--square ]">
-					<span class="[ fa fa-chevron-right ]"></span>
-				</a>
 				<a href="" class="[ bg-gray-xlight ][ btn--square ]">
 					<i class="[ fa fa-facebook-official ]"></i>
 				</a>
@@ -52,27 +59,21 @@
 
 		</div><!-- clearfix -->
 
-		<div class="[ clearfix ][ margin-bottom ]">
+		<div class="[ clearfix ][ margin-bottom--large ]">
 			<section class="[ street-view ][ relative ][ no-padding ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
-				<div class="[ img-responsive street-view-img ]"></div>
+				<div class="[ street-view-img ]"></div>
 				<a class="[ btn btn-primary btn-sm ][ absolute absolute-top--0 absolute-right--0 ]" href="#">
 					<i class="[ fa fa-street-view fa-2x ]"></i>
 				</a>
 			</section>
 		</div><!-- clearfix -->
 
-		<div class="[ clearfix ]">
+		<div class="[ clearfix ][ margin-bottom--large ]">
 			<section class="[ text-center ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
 				<p><em>#SabíasQue</em>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i class="[ fa fa-twitter ]"></i></a> </p>
 				<p><?php echo $sabias_que; ?></p>
 			</section>
 		</div><!-- clearfix -->
-
-		<section class="[ row ]">
-			<div class="">
-				<div id="mapa" class="[ map map--mini ]"></div>
-			</div>
-		</section>
 
 	</div>
 

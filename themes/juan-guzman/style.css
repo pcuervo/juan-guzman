@@ -3512,7 +3512,7 @@ fieldset[disabled] .btn-danger.active {
   .btn--square {
     width: 40px;
     height: 40px;
-    padding: 11px 7px;
+    padding: 9px 13px;
   }
 }
 .btn-bordered {
@@ -6007,11 +6007,13 @@ header .header__title {
   position: relative;
   top: 8px;
 }
+header .header__back {
+  font-size: 12px;
+  position: relative;
+  top: 8px;
+}
 .main-image img {
   max-height: 80vh;
-}
-.map--mini {
-  display: none;
 }
 .modal-open {
   overflow: hidden;
@@ -6661,6 +6663,12 @@ header .header__title {
 .margin-bottom {
   margin-bottom: 18px;
 }
+.margin-bottom--large {
+  margin-bottom: 36px;
+}
+.margin-bottom--xl {
+  margin-bottom: 42px;
+}
 .inline-block {
   display: inline-block;
 }
@@ -6767,8 +6775,14 @@ header .header__title {
 .absolute {
   position: absolute;
 }
+.fixed {
+  position: fixed;
+}
 .absolute-top--0 {
   top: 0;
+}
+.top-50 {
+  top: 50vh;
 }
 .absolute-right--0 {
   right: 0;
@@ -6787,6 +6801,12 @@ header .header__title {
 }
 .inline-block {
   display: inline-block;
+}
+.z-index-1 {
+  z-index: 1000;
+}
+.z-index-10 {
+  z-index: 10000;
 }
 @-ms-viewport {
   width: device-width;
