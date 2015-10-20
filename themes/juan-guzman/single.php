@@ -29,18 +29,21 @@
 	</section>
 	
 	<section>
-	
-		<div class=" [ col-xs-6 ]">
-			<a href="" class="[ bg-gray-light ] [ btn-social ] [ text-left padding--xs inline-block ]">
+		<div class=" [ col-xs-6 ] [ text-right padding-none]">		
+			<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
 				<span class=" [ glyphicon glyphicon-chevron-left ]"></span>
 			</a>
 		</div>
-		<div class=" [ col-xs-6 ]">
-			<a href="" class="[ bg-gray-light ] [ btn-social ] [ text-right padding--xs inline-block ]">
+		<div class=" [ col-xs-6 ] [ text-left ]">
+			<a href="" class="[ bg-gray-light ] [ btn-social ] [ padding--xs inline-block ]">
 				<span class=" [ glyphicon glyphicon-chevron-right ]"></span>
 			</a>
-		</div>
-		
+	</section>
+
+	<section>
+		<a class="[ btn btn-primary btn-squared ]" href="#">
+			<span class="icon-street"></span>
+		</a>
 	</section>
 
 	<div class="[ container-fluid ]">

@@ -67,11 +67,6 @@
 		</div>
 	</section>
 	
-	<section>
-	<a href="" class="color-gray">
-		<span class=" icon-facebook"></span>
-	</a>
-		
-	</section>
+	
 
 <?php get_footer(); ?>
