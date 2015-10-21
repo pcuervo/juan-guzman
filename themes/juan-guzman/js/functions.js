@@ -4,22 +4,17 @@ var $=jQuery.noConflict();
 	#GENERAL FUNCTIONS
 \*------------------------------------*/
 
-/**
- * This is an example description
- * @param type name
- * @return type name
-**/
-function exampleFunction( ){
-
-}// exampleFunction
-
-
 
 /*------------------------------------*\
     #MAP FUNCTIONS
 \*------------------------------------*/
 
-function createEmptyMap( isAerial ){
+/**
+ * Crea mapa sin marcadores
+ * @param bool isSatellite 
+ * @return obj map
+**/
+function createEmptyMap( isSatellite ){
 
     var map = new google.maps.Map(document.getElementById('mapa'), {
         zoom: 18,
@@ -33,7 +28,7 @@ function createEmptyMap( isAerial ){
         }
     });
 
-    if( isAerial ) {
+    if( isSatellite ) {
         map.setMapTypeId(google.maps.MapTypeId.SATELLITE);
         return map;
     }
@@ -52,7 +47,8 @@ function createMarker( mapa, lat, lng, decada ){
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng( lat, lng ),
         map: mapa,
-        category: decada
+        category: decada,
+        icon: themepath + 'img/marker-' + decada + '.png'
     });
 
     return marker;
@@ -94,6 +90,7 @@ function addDecadaFilter( mapa, markers ){
 
     $('.filtro-decada a').click(function(){
         var decada = $(this).data('decada');
+        $(this).addClass('active');
         filterMarkersDecada( mapa, markers, decada );
     });
 
