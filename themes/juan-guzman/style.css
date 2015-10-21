@@ -1280,16 +1280,13 @@ h6,
   font-size: 16px;
 }
 h2 {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-transform: uppercase;
-}
-.header__subtitle {
-  font-size: 26px;
-  line-height: 1;
 }
 p {
   margin: 0 0 12.5px;
   font-size: 16px;
+  line-height: 21px;
   font-family: "cordale", Georgia, "Times New Roman", Times, serif;
 }
 .lead {
@@ -6011,18 +6008,94 @@ header {
 header.fixed {
   position: fixed;
 }
-header .header__title {
+.header__title {
   font-size: 19px;
   position: relative;
   top: 8px;
 }
-header .header__back {
+.header__back {
   font-size: 12px;
   position: relative;
   top: 8px;
 }
+.hero__image {
+  width: 100%;
+  height: auto;
+}
+.hero__text {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .hero__text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 768px) {
+  .hero__text h1,
+  .hero__text p {
+    display: inline-block;
+  }
+}
+.hero__subtitle {
+  font-size: 26px;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  .image-bg {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .image-bg > img {
+    display: none;
+  }
+  .image-bg--hero {
+    background-image: url('img/img1.jpg');
+  }
+  .image-bg--hans-gutmann {
+    background-image: url('img/img5.jpg');
+  }
+  .image-bg--europa {
+    background-image: url('img/img7.jpg');
+  }
+  .image-bg--espana {
+    background-image: url('img/img6.jpg');
+  }
+  .image-bg--mexico {
+    background-image: url('img/img8.jpg');
+  }
+  .image-bg--metropoli {
+    background-image: url('img/img9.jpg');
+  }
+}
 .main-image img {
   max-height: 80vh;
+}
+.section__info {
+  padding: 36px 18px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .section__info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.section__info--dark {
+  background: #000000;
+  color: #ffffff;
+}
+.section__info--light {
+  background: #ffffff;
+  color: #000000;
 }
 .modal-open {
   overflow: hidden;

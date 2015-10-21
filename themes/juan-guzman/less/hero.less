@@ -1,0 +1,27 @@
+.hero__image{
+  width: 100%; height: auto;
+}
+
+.hero__text{
+  text-align: center;
+
+  @media (min-width: @screen-sm){
+    width: 100%;
+    position: absolute; top: 50%; left:50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.hero__text h1,
+.hero__text p {
+  @media (min-width: @screen-sm){
+    display: inline-block;
+  }
+
+}
+
+.hero__subtitle{
+  font-size: 26px;
+  line-height: 1;
+}
+
