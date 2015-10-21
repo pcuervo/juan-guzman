@@ -3512,41 +3512,44 @@ fieldset[disabled] .btn-danger.active {
   color: #4d4d4d;
   font-size: 16px;
 }
+.btn-decada:hover,
 .btn-decada:active {
-  text-decoration: none;
-}
-.btn-decada:hover {
   text-decoration: none;
 }
 .thirty {
   box-shadow: inset 0px 3px 0px #f53817;
 }
-.thirty:hover {
+.thirty:hover,
+.thirty.active {
   box-shadow: inset 0px 5px 0px #f53817;
 }
 .fourty {
   box-shadow: inset 0px 3px 0px #f11f06;
 }
-.fourty:hover {
+.fourty:hover,
+.fourty.active {
   box-shadow: inset 0px 5px 0px #f11f06;
 }
 .fifty {
   box-shadow: inset 0px 3px 0px #cc003d;
 }
-.fifty:hover {
+.fifty:hover,
+.fifty.active {
   box-shadow: inset 0px 5px 0px #cc003d;
 }
 .sixty {
   box-shadow: inset 0px 3px 0px #9a0b28;
 }
-.sixty:hover {
+.sixty:hover,
+.sixty.active {
   box-shadow: inset 0px 5px 0px #9a0b28;
 }
 .all {
   box-shadow: inset 0px 3px 0px #4d4d4d;
   background-color: #cccccc;
 }
-.all:hover {
+.all:hover,
+.all.active {
   box-shadow: inset 0px 5px 0px #4d4d4d;
 }
 .btn--square {
