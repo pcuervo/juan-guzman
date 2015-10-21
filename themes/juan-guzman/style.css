@@ -6047,6 +6047,7 @@ header {
   height: 46px;
 }
 header.fixed {
+  width: 100%;
   position: fixed;
 }
 .header__title {
