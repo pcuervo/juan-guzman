@@ -100,46 +100,43 @@
   vertical-align: middle;
   color: @gray;
   font-size: floor((@font-size-base * 0.9));
-  &:active {
-    text-decoration: none;
-  }
-  &:hover{
+  &:hover, &:active{
     text-decoration: none;
   }
 }
 
-.thirty{ 
+.thirty{
   box-shadow: inset 0px 3px 0px @30s;
-  &:hover{
+  &:hover, , &.active{
     box-shadow: inset 0px 5px 0px @30s;
   }
 }
-.fourty{ 
+.fourty{
   box-shadow: inset 0px 3px 0px @40s;
-  &:hover{
+  &:hover, , &.active{
     box-shadow: inset 0px 5px 0px @40s;
   }
 }
-.fifty{ 
+.fifty{
   box-shadow: inset 0px 3px 0px @50s;
-  &:hover{
+  &:hover, , &.active{
     box-shadow: inset 0px 5px 0px @50s;
   }
 }
 .sixty{
   box-shadow: inset 0px 3px 0px @60s;
-  &:hover{
+  &:hover, , &.active{
     box-shadow: inset 0px 5px 0px @60s;
   }
 }
 
 .all{
   box-shadow: inset 0px 3px 0px @gray;
- 
-  &:hover{
+
+  &:hover, , &.active{
     box-shadow: inset 0px 5px 0px @gray;
   }
-  background-color: @gray-light; 
+  background-color: @gray-light;
 }
 //Squared buttons
 .btn--square{
