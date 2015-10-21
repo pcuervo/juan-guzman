@@ -3518,6 +3518,9 @@ fieldset[disabled] .btn-danger.active {
 .btn-decada:active {
   text-decoration: none;
 }
+.btn-decada:hover {
+  text-decoration: none;
+}
 .thirty {
   box-shadow: inset 0px 3px 0px #f53817;
 }

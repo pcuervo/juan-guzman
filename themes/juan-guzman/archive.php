@@ -5,16 +5,16 @@
 		<a class="[ ][ btn-decada ][ thirty ]" href="#" data-decada="1930">
 			1930
 		</a><a
-		class="[  ][ btn-decada ][ fourty ]" href="#" data-decada="1940">
+		class="[ btn-decada ][ fourty ]" href="#" data-decada="1940">
 			1940
 		</a><a
-		class="[  ][ btn-decada ][ fifty ]" href="#" data-decada="1950">
+		class="[ btn-decada ][ fifty ]" href="#" data-decada="1950">
 			1950
 		</a><a
-		class="[  ][ btn-decada ][ sixty ]" href="#" data-decada="1960">
+		class="[ btn-decada ][ sixty ]" href="#" data-decada="1960">
 			1960
 		</a><a
-		class="[  ][ btn-decada ][ all ]" href="#" data-decada="todas">
+		class="[ btn-decada ][ all ]" href="#" data-decada="todas">
 			Todas
 		</a>
 	</div>
