@@ -22,7 +22,7 @@
 					</a>
 				</div>
 				<div class="[ col-xs-6 ][ margin-bottom ]">
-					<a href="<?php echo site_url('fotos-jg'); ?>" class="[ btn btn-bordered btn-sm ]">
+					<a href="<?php echo site_url('foto-jg'); ?>" class="[ btn btn-bordered btn-sm ]">
 						Ir a mapa
 					</a>
 				</div>

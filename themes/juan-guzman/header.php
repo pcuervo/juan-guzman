@@ -75,3 +75,21 @@
 			</header>
 
 		<?php } ?>
+
+		<?php if ( is_archive() ){ ?>
+
+			<header class="[ text-center ][ container ][ fixed ]">
+				<div class="[ row ]">
+					<span class="[ text-center ][ col-xs-8 ]">
+						<h1 class="[ header__title ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]">
+							<a class="[ color-light ]" href="<?php echo site_url(); ?>">
+								<strong>Juan Guzmán</strong>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								<i class="[ fa fa-book ]"></i>
+							</a>
+						</h1>
+					</span>
+				</div><!-- row -->
+			</header>
+
+		<?php } ?>
