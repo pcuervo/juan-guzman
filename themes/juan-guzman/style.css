@@ -1280,6 +1280,7 @@ h6,
   font-size: 16px;
 }
 h2 {
+  margin-bottom: 50px;
   text-transform: uppercase;
 }
 .header__subtitle {
@@ -3513,6 +3514,9 @@ fieldset[disabled] .btn-danger.active {
   vertical-align: middle;
   color: #4d4d4d;
   font-size: 16px;
+}
+.btn-decada:active {
+  text-decoration: none;
 }
 .thirty {
   box-shadow: inset 0px 3px 0px #f53817;

@@ -100,6 +100,9 @@
   vertical-align: middle;
   color: @gray;
   font-size: floor((@font-size-base * 0.9));
+  &:active{
+    text-decoration: none;
+  }
 }
 
 .thirty{ 
@@ -129,12 +132,12 @@
 
 .all{
   box-shadow: inset 0px 3px 0px @gray;
-  background-color: @gray-light; 
+ 
   &:hover{
     box-shadow: inset 0px 5px 0px @gray;
   }
+  background-color: @gray-light; 
 }
-
 //Squared buttons
 .btn--square{
   display: block;
