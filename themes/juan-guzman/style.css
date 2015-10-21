@@ -3503,6 +3503,55 @@ fieldset[disabled] .btn-danger.active {
 .btn-squared {
   padding: 18px;
 }
+.btn-decada {
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  width: 20%;
+  height: 100%;
+  padding: 5px 9px;
+  display: table-cell;
+  vertical-align: middle;
+  color: #4d4d4d;
+  font-size: 16px;
+}
+.btn-decada:active {
+  text-decoration: none;
+}
+.btn-decada:hover {
+  text-decoration: none;
+}
+.thirty {
+  box-shadow: inset 0px 3px 0px #f53817;
+}
+.thirty:hover {
+  box-shadow: inset 0px 5px 0px #f53817;
+}
+.fourty {
+  box-shadow: inset 0px 3px 0px #f11f06;
+}
+.fourty:hover {
+  box-shadow: inset 0px 5px 0px #f11f06;
+}
+.fifty {
+  box-shadow: inset 0px 3px 0px #cc003d;
+}
+.fifty:hover {
+  box-shadow: inset 0px 5px 0px #cc003d;
+}
+.sixty {
+  box-shadow: inset 0px 3px 0px #9a0b28;
+}
+.sixty:hover {
+  box-shadow: inset 0px 5px 0px #9a0b28;
+}
+.all {
+  box-shadow: inset 0px 3px 0px #4d4d4d;
+  background-color: #cccccc;
+}
+.all:hover {
+  box-shadow: inset 0px 5px 0px #4d4d4d;
+}
 .btn--square {
   display: block;
   width: 28px;
@@ -3515,14 +3564,6 @@ fieldset[disabled] .btn-danger.active {
     height: 40px;
     padding: 9px 13px;
   }
-}
-.btn-decada {
-  height: 50vh;
-  border-top: 5vh solid;
-}
-.map-bar {
-  position: fixed;
-  bottom: 0px;
 }
 .btn-bordered {
   border-left: 1px solid #d91803;
@@ -6023,6 +6064,19 @@ header .header__back {
 }
 .main-image img {
   max-height: 80vh;
+}
+.map {
+  height: 90vh;
+}
+.map__bar {
+  width: 100%;
+  height: 10vh;
+  color: #4d4d4d;
+  display: table;
+}
+.info-window__img {
+  width: 120px;
+  height: auto;
 }
 .modal-open {
   overflow: hidden;

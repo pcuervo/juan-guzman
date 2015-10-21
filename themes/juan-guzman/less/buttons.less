@@ -90,6 +90,57 @@
 .btn-squared{
   padding: @padding-base-vertical;
 }
+// Decada buttons
+.btn-decada{
+  cursor: pointer;
+  text-align: center; text-transform: uppercase;
+  width: 20%; height: 100%;
+  padding: @padding-xs-vertical @padding-xs-horizontal;
+  display: table-cell;
+  vertical-align: middle;
+  color: @gray;
+  font-size: floor((@font-size-base * 0.9));
+  &:active {
+    text-decoration: none;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.thirty{ 
+  box-shadow: inset 0px 3px 0px @30s;
+  &:hover{
+    box-shadow: inset 0px 5px 0px @30s;
+  }
+}
+.fourty{ 
+  box-shadow: inset 0px 3px 0px @40s;
+  &:hover{
+    box-shadow: inset 0px 5px 0px @40s;
+  }
+}
+.fifty{ 
+  box-shadow: inset 0px 3px 0px @50s;
+  &:hover{
+    box-shadow: inset 0px 5px 0px @50s;
+  }
+}
+.sixty{
+  box-shadow: inset 0px 3px 0px @60s;
+  &:hover{
+    box-shadow: inset 0px 5px 0px @60s;
+  }
+}
+
+.all{
+  box-shadow: inset 0px 3px 0px @gray;
+ 
+  &:hover{
+    box-shadow: inset 0px 5px 0px @gray;
+  }
+  background-color: @gray-light; 
+}
 //Squared buttons
 .btn--square{
   display: block;
@@ -104,16 +155,7 @@
   @media (min-width: @screen-lg-min){}
 
 }
-// Decada buttons
-.btn-decada{
-  height: 50vh;
-  border-top: 5vh solid;
-}
 
-.map-bar {
-  position: fixed;
-  bottom: 0px;
-}
 //Bordered button
 .btn-bordered{
   border-left: 1px solid @brand-primary; border-right: 1px solid @brand-primary;
