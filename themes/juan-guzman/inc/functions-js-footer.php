@@ -36,10 +36,12 @@ function footer_scripts(){
 				// Pasar a función
 				var lat = <?php echo get_lat( get_the_ID() ); ?>;
 				var lng = <?php echo get_lng( get_the_ID() ); ?>;
+				var decada = <?php echo get_decada( get_the_ID() ); ?>;
 				var isAerial = <?php echo get_vista_aerea( get_the_ID() ) ?>;
 				var heading = <?php echo get_heading( get_the_ID() ) ?>;
+				console.log( decada );
 
-				showSingleMap( lat, lng, heading, isAerial );			
+				showSingleMap( lat, lng, heading, isAerial, decada );			
 
 			<?php endif; ?>
 		</script>

@@ -76,10 +76,10 @@ function addAllMarkers(){
 
 }// addAllMarkers
 
-function showSingleMap( lat, lng, heading, isAerial ){
+function showSingleMap( lat, lng, heading, isAerial, decada ){
 
     var mapa = createEmptyMap( isAerial );
-    var markers = [ createMarker( mapa, lat, lng ) ];
+    var markers = [ createMarker( mapa, lat, lng, decada ) ];
     autoCenter( mapa, markers );
 
     if ( 1 != isAerial ) displayStreetViewImage( '.street-view-img', lat, lng, 640, 320, heading );
