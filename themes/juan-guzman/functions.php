@@ -228,6 +228,46 @@ function get_photos_info(){
 
 }// get_photos_info
 
+/**
+ * Regresa la URL de la foto anterior, con base al orden de los QRs
+ * @param int $post_name
+ * @return int $previous_url
+ */
+function get_previous_photo_url( $post_name ){
+	
+	$post_name_arr = explode( '-', $post_name );
+	$current_photo_number = intval( $post_name_arr[2] );
+
+	if( $current_photo_number > 1 ){
+		$current_photo_number -= 1;
+
+		return site_url() . '/' . substr( $post_name, 0, -2 ) . str_pad($current_photo_number, 2, "0", STR_PAD_LEFT);
+	}
+
+	return site_url() . '/' . substr( $post_name, 0, -2 ) . '60';
+
+}// get_previous_photo_url
+
+/**
+ * Regresa la URL de la foto siguiente, con base al orden de los QRs
+ * @param int $post_name
+ * @return int $next_url
+ */
+function get_next_photo_url( $post_name ){
+	
+	$post_name_arr = explode( '-', $post_name );
+	$current_photo_number = intval( $post_name_arr[2] );
+
+	if( $current_photo_number < 60 ){
+		$current_photo_number += 1;
+
+		return site_url() . '/' . substr( $post_name, 0, -2 ) . str_pad($current_photo_number, 2, "0", STR_PAD_LEFT);
+	}
+
+	return site_url() . '/' . substr( $post_name, 0, -2 ) . '01';
+
+}// get_next_photo_url
+
 
 /*------------------------------------*\
 	#AJAX FUNCTIONS
