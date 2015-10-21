@@ -53,6 +53,7 @@
 		wp_localize_script( 'functions', 'site_url', site_url() );
 		wp_localize_script( 'functions', 'theme_url', THEMEPATH );
 		wp_localize_script( 'functions', 'allPhotosInfo', get_photos_info() );
+		wp_localize_script( 'functions', 'themepath', THEMEPATH );
 
 
 		// styles
