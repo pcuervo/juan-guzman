@@ -191,6 +191,15 @@ function get_decada( $post_id ){
 }// get_decada
 
 /**
+ * Jalar StreetView URL de un post tipo 'foto-jg'
+ * @param int $post_id
+ * @return int $street_view_url
+ */
+function get_street_view_url( $post_id ){
+	return get_post_meta($post_id, '_street_view_url_meta', true);
+}// get_street_view_url
+
+/**
  * Regresa toda la información de las fotos de Juan Guzmán
  * @return JSON $infoPhotos
  */
