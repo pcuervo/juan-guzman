@@ -24,7 +24,7 @@
 	</section>
 
 	<a href="<?php echo get_previous_photo_url( $post->post_name ) ?>" class="[ col-xs-1 ][ bg-gray-light ][ btn--square ][ fixed top-50 absolute-left--0 ][ z-index-10 ]">
-		<span class=" [ fa fa-chevron-left ]"></span>
+		<span class="[ fa fa-chevron-left ]"></span>
 	</a>
 	<a href="<?php echo get_next_photo_url( $post->post_name ) ?>" class="[ col-xs-1 ][ bg-gray-light ][ btn--square ][ fixed top-50 absolute-right--0 ][ z-index-10 ]">
 		<span class="[ fa fa-chevron-right ]"></span>

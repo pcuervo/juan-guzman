@@ -61,8 +61,8 @@
 						<h1 class="[ bg-primary ][ header__title ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]">
 							<a class="[ color-light ]" href="<?php echo site_url(); ?>">
 								<strong>Juan Guzmán</strong>
-								&nbsp;&nbsp;&nbsp;&nbsp;
 								<i class="[ fa fa-book ]"></i>
+								<img src="<?php echo THEMEPATH; ?>img/logo-fundacion.png">
 							</a>
 						</h1>
 					</span>
@@ -83,8 +83,8 @@
 					<h1 class="[ header__title ][ bg-primary ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]">
 						<a class="[ color-light ]" href="<?php echo site_url(); ?>">
 							<strong>Juan Guzmán</strong>
-							&nbsp;&nbsp;&nbsp;&nbsp;
 							<i class="[ fa fa-book ]"></i>
+							<img src="<?php echo THEMEPATH; ?>img/logo-fundacion.png">
 						</a>
 					</h1>
 				</div><!-- row -->

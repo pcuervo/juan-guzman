@@ -40,7 +40,7 @@
 				<span class="[ border-bottom border-bottom--primary ]">Hans</span>
 				<span class="[ border-bottom border-bottom--primary ]">Gutmann</span>
 			</h2>
-			<p class="[ ]">El primer nombre de Juan Guzman fue Hans Gutmann. Nacido en <u>Colonia, Alemania,</u>en 1911, hizo estudios en ingeniería metalúrgica. La situación económica de su país natal no fue propicia para su desenvolvimiento en esa disciplina. Las producciones de una pequeña compañía cinematográfica le dieron oportunidad de aprender otros oficios. Por esa vía inició su relación con la fotografía, que pocos años después habría de ejercer como principal profesión y como herramienta al servicio de las causas políticas de las que fue seguidor. </p>
+			<p class="[ ]">El primer nombre de Juan Guzman fue Hans Gutmann. Nacido en Colonia, Alemania, en 1911, hizo estudios en ingeniería metalúrgica. La situación económica de su país natal no fue propicia para su desenvolvimiento en esa disciplina. Las producciones de una pequeña compañía cinematográfica le dieron oportunidad de aprender otros oficios. Por esa vía inició su relación con la fotografía, que pocos años después habría de ejercer como principal profesión y como herramienta al servicio de las causas políticas de las que fue seguidor. </p>
 			<span class="[ color-brand-primary ]">&#8595;</span>
 		</div>
 	</section>
@@ -73,7 +73,7 @@
 			<h2 class="[ color-gray ] ">
 				<span class="[ border-bottom border-bottom--primary ]">México</span>
 			</h2>
-			<p class="[ ]">Guzmán llegó a México en 1939, como parte de la comunidad de los refugiados españoles. A fines de ese año se integró al medio fotoperiodístico mexicano, del que fue parte activa en las siguientes tres décadas. Trabajó asimismo como corresponsal de la compañía estadounidense Time-Life. Novedades, Así, Hoy, Mañana, Sucesos para todos, Tiempo y Life en español, publicaron las imágenes y reportajes en que Guzmán hizo la crónica de las múltiples transformaciones de un país sometido a los impulsos, influjos y encandilamientos de la modernidad. </p>
+			<p class="[ ]">Guzmán llegó a México en 1939, como parte de la comunidad de los refugiados españoles. A fines de ese año se integró al medio fotoperiodístico mexicano, del que fue parte activa en las siguientes tres décadas. Trabajó asimismo como corresponsal de la compañía estadounidense Time-Life. <em>Novedades, Así, Hoy, Mañana, Sucesos para todos, Tiempo</em> y <em>Life en español</em>, publicaron las imágenes y reportajes en que Guzmán hizo la crónica de las múltiples transformaciones de un país sometido a los impulsos, influjos y encandilamientos de la modernidad. </p>
 			<span class="[ color-brand-primary ]">&#8595;</span>
 		</div>
 	</section>
@@ -84,7 +84,10 @@
 			<h2 class="[]">
 				<span class="[ border-bottom border-bottom--primary ]">Metrópoli</span>
 			</h2>
-			<p class="[ ]">La capital mexicana, magno escenario en que se confrontaban las tensiones entre lo tradicional y lo vanguardista, fue tema de muchas de las correrías fotográficas de Juan Guzmán, quien murió en esta urbe en 1982. El título de esta muestra procede de un reportaje publicado en la revista Mañana en 1952 y las imágenes que la conforman del archivo que por decisión de Teresita Miranda, última pareja de Guzmán, se integró a la colección fotográfica de Fundación Televisa.</p>
+			<p class="[ ]">La capital mexicana, magno escenario en que se confrontaban las tensiones entre lo tradicional y lo vanguardista, fue tema de muchas de las correrías fotográficas de Juan Guzmán, quien murió en esta urbe en 1982. El título de esta muestra procede de un reportaje publicado en la revista </em>Mañana</em> en 1952 y las imágenes que la conforman del archivo que por decisión de Teresita Miranda, última pareja de Guzmán, se integró a la colección fotográfica de Fundación Televisa.</p>
+			<br />
+			<br />
+			<p class="[ text-right ]">Alfonso Morales Carrillo</p>
 		</div>
 	</section>
 
