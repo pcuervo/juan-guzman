@@ -55,7 +55,7 @@
 
 		<?php if ( is_home() ){ ?>
 
-			<header class="[ text-center ][ container ]">
+			<header class="[ text-center ][ container ][ absolute absolute-top--0 z-index-10 ]">
 				<div class="[ bg-primary ][ padding--xs no-margin ][ inline-block ][ pull-right ]">
 					<img src="<?php echo THEMEPATH; ?>img/logo-fundacion.png">
 				</div>
