@@ -6125,6 +6125,25 @@ header.fixed {
 .main-image img {
   max-height: 80vh;
 }
+.image-bg--cover {
+  width: 100%;
+  padding-bottom: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.image-bg--cover.image-bg--metropoli {
+  background-image: url('img/img9.jpg');
+}
+.image-bg--cover.image-bg--metropoli .hero__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .map {
   height: 90vh;
 }

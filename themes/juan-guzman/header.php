@@ -53,7 +53,21 @@
 
 	<body>
 
-		<?php if ( is_singular() ){ ?>
+		<?php if ( is_home() ){ ?>
+
+			<header class="[ text-center ][ container ][ fixed z-index-10 ]">
+				<div class="[ container ]">
+					<div class="[ row ]">
+						<div class="[ bg-primary ][ padding--xs no-margin ][ inline-block ][ pull-right ]">
+							<img src="<?php echo THEMEPATH; ?>img/logo-fundacion.png">
+						</div>
+					</div><!-- row -->
+				</div>
+			</header>
+
+		<?php } ?>
+
+		<?php if ( is_single() ){ ?>
 
 			<header class="[ text-center ][ container ]">
 				<div class="[ row ]">
@@ -61,8 +75,8 @@
 						<h1 class="[ bg-primary ][ header__title ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]">
 							<a class="[ color-light ]" href="<?php echo site_url(); ?>">
 								<strong>Juan Guzmán</strong>
+								&nbsp;&nbsp;&nbsp;&nbsp;
 								<i class="[ fa fa-book ]"></i>
-								<img src="<?php echo THEMEPATH; ?>img/logo-fundacion.png">
 							</a>
 						</h1>
 					</span>
@@ -76,18 +90,18 @@
 
 		<?php } ?>
 
-		<?php if ( is_archive() ){ ?>
+		<?php if ( is_archive() OR is_page() ){ ?>
 
-			<header class="[ text-center ][ container ][ fixed z-index-10 ]">
-				<div class="[ row ]">
+			<header class="[ text-left ][ container ][ fixed z-index-10 ]">
+				<div class="[ container ]">
 					<h1 class="[ header__title ][ bg-primary ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]">
 						<a class="[ color-light ]" href="<?php echo site_url(); ?>">
 							<strong>Juan Guzmán</strong>
+							&nbsp;&nbsp;&nbsp;&nbsp;
 							<i class="[ fa fa-book ]"></i>
-							<img src="<?php echo THEMEPATH; ?>img/logo-fundacion.png">
 						</a>
 					</h1>
-				</div><!-- row -->
+				</div>
 			</header>
 
 		<?php } ?>
