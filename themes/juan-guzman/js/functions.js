@@ -90,6 +90,7 @@ function addDecadaFilter( mapa, markers ){
 
     $('.filtro-decada a').click(function(){
         var decada = $(this).data('decada');
+        $('.filtro-decada a').removeClass('active');
         $(this).addClass('active');
         filterMarkersDecada( mapa, markers, decada );
     });

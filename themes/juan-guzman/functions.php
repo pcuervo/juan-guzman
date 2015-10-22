@@ -241,7 +241,6 @@ function get_previous_photo_url( $post_name ){
 
 	if( $current_photo_number > 1 ){
 		$current_photo_number -= 1;
-
 		return site_url() . '/' . substr( $post_name, 0, -2 ) . str_pad($current_photo_number, 2, "0", STR_PAD_LEFT);
 	}
 
