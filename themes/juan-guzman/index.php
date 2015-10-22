@@ -4,11 +4,11 @@
 		<img class="[ hero__image ]" src="<?php echo THEMEPATH; ?>img/img1.jpg" alt="">
 		<div class="[ hero__text ]">
 			<p class="[ bg-light ][ hero__subtitle ][ padding no-margin ][ color-dark font-sans-serif text-uppercase ]"><strong>La crónica citadina de</strong></p>
-			<br />
+			<br class="[ hidden-xs ]" />
 			<h1 class="[ bg-primary ][ hero__title ][ padding no-margin ][ text-uppercase ]"><strong>Juan Guzmán</strong></h1>
-			<br />
+			<br class="[ hidden-xs ]" />
 			<p class="[ bg-light ][ padding no-margin ]">En donde no cabe un alfiler <wbr> bien caben dos <em>ruleteros</em></p>
-			<br />
+			<br class="[ hidden-xs ]" />
 			<h2 class="[ color-light text-center ][ hidden-xs ]">&#8595;</h2>
 		</div>
 	</section>
