@@ -211,7 +211,7 @@ function get_photos_info(){
 		$lugar = get_lugar( $post->ID );
 		$fecha = get_fecha( $post->ID );
 		$decada = get_decada( $post->ID );
-		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' );
 		$info_photos[$post->post_name] = array(
 			'title'			=> $post->post_title,
 			'lat'			=> $lat,
@@ -245,7 +245,7 @@ function get_previous_photo_url( $post_name ){
 		return site_url() . '/' . substr( $post_name, 0, -2 ) . str_pad($current_photo_number, 2, "0", STR_PAD_LEFT);
 	}
 
-	return site_url() . '/' . substr( $post_name, 0, -2 ) . '60';
+	return site_url() . '/' . substr( $post_name, 0, -2 ) . '74';
 
 }// get_previous_photo_url
 
@@ -259,7 +259,7 @@ function get_next_photo_url( $post_name ){
 	$post_name_arr = explode( '-', $post_name );
 	$current_photo_number = intval( $post_name_arr[2] );
 
-	if( $current_photo_number < 60 ){
+	if( $current_photo_number < 74 ){
 		$current_photo_number += 1;
 
 		return site_url() . '/' . substr( $post_name, 0, -2 ) . str_pad($current_photo_number, 2, "0", STR_PAD_LEFT);
