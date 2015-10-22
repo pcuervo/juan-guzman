@@ -55,13 +55,9 @@
 
 		<?php if ( is_home() ){ ?>
 
-			<header class="[ text-center ][ container ][ fixed z-index-10 ]">
-				<div class="[ container ]">
-					<div class="[ row ]">
-						<div class="[ bg-primary ][ padding--xs no-margin ][ inline-block ][ pull-right ]">
-							<img src="<?php echo THEMEPATH; ?>img/logo-fundacion.png">
-						</div>
-					</div><!-- row -->
+			<header class="[ text-center ][ container ]">
+				<div class="[ bg-primary ][ padding--xs no-margin ][ inline-block ][ pull-right ]">
+					<img src="<?php echo THEMEPATH; ?>img/logo-fundacion.png">
 				</div>
 			</header>
 
