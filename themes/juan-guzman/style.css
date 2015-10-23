@@ -6107,7 +6107,7 @@ header.fixed {
     background-image: url('img/img1.jpg');
   }
   .image-bg--hans-gutmann {
-    background-image: url('img/img5.jpg');
+    background-image: url('img/juan-guzman.jpg');
   }
   .image-bg--europa {
     background-image: url('img/img7.jpg');
@@ -6176,9 +6176,19 @@ header.fixed {
   background: #000000;
   color: #ffffff;
 }
+@media (min-width: 768px) {
+  .section__info--dark {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
 .section__info--light {
   background: #ffffff;
   color: #000000;
+}
+@media (min-width: 768px) {
+  .section__info--light {
+    background: rgba(255, 255, 255, 0.7);
+  }
 }
 .modal-open {
   overflow: hidden;
