@@ -6167,8 +6167,8 @@ header.fixed {
 .gm-style-iw + div {
   position: absolute !important;
   opacity: 1 !important;
-  right: 48px !important;
-  top: 8px !important;
+  right: 45px !important;
+  top: 5px !important;
   border-radius: 50%;
   box-shadow: 0 0 0px 5px #ffffff, 0 0 5px 7px #d91803;
 }
