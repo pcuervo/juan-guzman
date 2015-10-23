@@ -44,17 +44,17 @@
 					</p>
 				</article>
 
-				<article>
+				<article class="[ content ]">
 					<?php the_content(); ?>
 				</article>
 
 			</section>
 
 			<section class="[ col-xs-1 ][ no-padding ]">
-				<a href="" class="[ bg-gray-xlight ][ btn--square ]">
+				<a href="" class="[ bg-gray-light ][ btn--square ]">
 					<i class="[ fa fa-facebook-official ]"></i>
 				</a>
-				<a href="" class="[ bg-gray-light ][ btn--square ]">
+				<a href="" class="[ bg-gray ][ btn--square ]">
 					<i class="[ fa fa-twitter ]"></i>
 				</a>
 			</section>
@@ -76,7 +76,7 @@
 
 		<?php if ( '' !== $sabias_que ){ ?>
 
-			<div class="[ clearfix ][ margin-bottom--large ]">
+			<div class="[ clearfix ][ padding-top-bottom--large ][ bg-gray-xlight ]">
 				<section class="[ text-center ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
 					<p><em>#SabíasQue</em>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i class="[ fa fa-twitter ]"></i></a> </p>
 					<p><?php echo $sabias_que; ?></p>

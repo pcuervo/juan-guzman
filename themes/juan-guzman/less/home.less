@@ -3,8 +3,25 @@
 	text-align: center;
 
 	@media (min-width: @screen-sm){
+		height: 100%;
+
 		position: absolute; top: 50%; left:50%;
 		.translate(-50%; -50%);
+
+		//overflow-y: scroll;
+	}
+}
+
+.section__text{
+	width: 100%;
+
+	@media (min-width: @screen-sm){
+		height: 50%;
+
+		position: absolute; top: 50%; left:50%;
+		.translate(-50%; -50%);
+
+		//overflow-y: scroll;
 	}
 }
 
@@ -20,5 +37,16 @@
 
 	@media (min-width: @screen-sm){
 		background: fade(@light, 70%);
+	}
+}
+
+.btn--map--float{
+
+	left: -20%;
+
+	.transition(all 0.3s ease );
+
+	&.toggled{
+		left: 0;
 	}
 }

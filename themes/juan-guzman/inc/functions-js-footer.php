@@ -11,27 +11,36 @@ function footer_scripts(){
 ?>
 		<script type="text/javascript">
 
-			/*------------------------------------*\
-				#GLOBAL
-			\*------------------------------------*/
 
-			/**
-			 * On load
-			**/
+			<?php if( is_home() ) : ?>
+				/*------------------------------------*\
+					#HOME
+				\*------------------------------------*/
 
-			/**
-			 * Triggered events
-			**/
+				toggleElementOnSscroll( $('header'), '.hero__text');
+				toggleElementOnSscroll( $('.image-bg--hero'), '.btn--map--float');
+
+				$(window).scroll(function(){
+					toggleElementOnSscroll( $('header'), '.hero__text');
+					toggleElementOnSscroll( $('.image-bg--hero'), '.btn--map--float');
+				});
+
+			<?php endif; ?>
 
 			<?php if( is_archive() ) : ?>
+				/*------------------------------------*\
+					#MAP
+				\*------------------------------------*/
 
 				addAllMarkers();
 
 			<?php endif; ?>
 
 
-
 			<?php if( is_single() ) : ?>
+				/*------------------------------------*\
+					#SINGLE
+				\*------------------------------------*/
 
 				// Pasar a función
 				var lat = <?php echo get_lat( get_the_ID() ); ?>;
@@ -41,7 +50,7 @@ function footer_scripts(){
 				var heading = <?php echo get_heading( get_the_ID() ) ?>;
 				console.log( decada );
 
-				showSingleMap( lat, lng, heading, isAerial, decada );			
+				showSingleMap( lat, lng, heading, isAerial, decada );
 
 			<?php endif; ?>
 		</script>

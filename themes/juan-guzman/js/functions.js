@@ -13,7 +13,7 @@ function styleInfoWindow(){
     iwBackground.children(':nth-child(2)').css({'display' : 'none'});
     iwBackground.children(':nth-child(4)').css({'display' : 'none'});
     iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1'});
-    
+
 }// styleInfoWindow
 
 
@@ -24,7 +24,7 @@ function styleInfoWindow(){
 
 /**
  * Crea mapa sin marcadores
- * @param bool isSatellite 
+ * @param bool isSatellite
  * @return obj map
 **/
 function createEmptyMap( isSatellite ){
@@ -174,13 +174,51 @@ function displayStreetViewImage( el, lat, lng, w, h, heading ){
 
 }// displayStreetViewImage
 
-
-
 /*------------------------------------*\
 	#AJAX FUNCTIONS
 \*------------------------------------*/
+
+
+
+
 
 /*------------------------------------*\
 	#GET / SET FUNCTIONS
 \*------------------------------------*/
 
+/**
+ * Get header's height
+ */
+function getElementHeight(element){
+    return $(element).outerHeight();
+}// getHeaderHeight
+
+/**
+ * Get the scrolled pixels in Y axis
+ */
+function getScrollY() {
+    return $(window).scrollTop();
+}// getScrollY
+
+
+
+/*------------------------------------*\
+    #TOGGLE FUNCTIONS
+\*------------------------------------*/
+
+/**
+ * Toggle action buttons
+ */
+ function toggleElementOnSscroll(elementTrigger, elementToToggle){
+    var elementHeight = getElementHeight(elementTrigger);
+    console.log(elementHeight);
+    //Scrolled pixels in Y axis
+    var sy = getScrollY();
+    //Compare the two numbers, when they are the same or less
+    //add fixed class to the element.
+    if ( sy >= elementHeight ) {
+        $(elementToToggle).addClass('toggled');
+    } else {
+        $(elementToToggle).removeClass('toggled');
+    }
+}// toggleActionButtons

@@ -5,10 +5,18 @@
 .hero__text{
   text-align: center;
 
+  .transition(all 0.8s ease );
+
   @media (min-width: @screen-sm){
     width: 100%;
     position: absolute; top: 50%; left:50%;
     .translate(-50%; -50%);
+
+    &.toggled{
+      width: 60%;
+      text-align: left;
+      left: 30%;
+    }
   }
 }
 
