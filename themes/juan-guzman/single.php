@@ -9,6 +9,7 @@
 	$is_aerial 			= get_vista_aerea( $post->ID );
 	$sabias_que 		= get_sabias_que( $post->ID );
 	$street_view_url 	= get_street_view_url( $post->ID );
+	$tiny_url			= file_get_contents( 'http://tinyurl.com/api-create.php?url=http://scripting.com/');
 
 ?>
 	<section class="[ main-image ][ container-fluid ][ no-padding margin-bottom ]">
@@ -51,10 +52,10 @@
 			</section>
 
 			<section class="[ col-xs-1 ][ no-padding ]">
-				<a href="" class="[ bg-gray-xlight ][ btn--square ]">
+				<a href="" class="[ bg-gray-xlight ][ btn--square ][ js-fb-share ]">
 					<i class="[ fa fa-facebook-official ]"></i>
 				</a>
-				<a href="" class="[ bg-gray-light ][ btn--square ]">
+				<a href="https://twitter.com/intent/tweet?via=FotograficaMx&url=<?php echo $tiny_url; ?>&text=<?php echo get_the_title(); ?>" class="[ bg-gray-light ][ btn--square ]">
 					<i class="[ fa fa-twitter ]"></i>
 				</a>
 			</section>
@@ -78,7 +79,7 @@
 
 			<div class="[ clearfix ][ margin-bottom--large ]">
 				<section class="[ text-center ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
-					<p><em>#SabíasQue</em>&nbsp;&nbsp;&nbsp;&nbsp; <a href="#"><i class="[ fa fa-twitter ]"></i></a> </p>
+					<p><em>#SabíasQue</em>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://twitter.com/intent/tweet?via=FotograficaMx&url=<?php echo $tiny_url; ?>&text=<?php echo $sabias_que; ?>"><i class="[ fa fa-twitter ]"></i></a> </p>
 					<p><?php echo $sabias_que; ?></p>
 				</section>
 			</div><!-- clearfix -->

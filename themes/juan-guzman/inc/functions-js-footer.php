@@ -19,6 +19,23 @@ function footer_scripts(){
 			 * On load
 			**/
 
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '1487150328256182',
+					xfbml      : true,
+					version    : 'v2.4'
+				});
+			};
+
+			(function(d, s, id){
+			     var js, fjs = d.getElementsByTagName(s)[0];
+			     if (d.getElementById(id)) {return;}
+			     js = d.createElement(s); js.id = id;
+			     js.src = "//connect.facebook.net/en_US/sdk.js";
+			     fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+
 			/**
 			 * Triggered events
 			**/
@@ -41,7 +58,16 @@ function footer_scripts(){
 				var heading = <?php echo get_heading( get_the_ID() ) ?>;
 				console.log( decada );
 
-				showSingleMap( lat, lng, heading, isAerial, decada );			
+				showSingleMap( lat, lng, heading, isAerial, decada );	
+
+				$('.js-fb-share').click( function(){
+					FB.ui(
+					{
+						method: 'share',
+						name: '<?php echo get_the_title(); ?>',
+						href: '<?php echo the_permalink() ?>'
+					}, function(response){ console.log( response )});
+				});		
 
 			<?php endif; ?>
 		</script>
