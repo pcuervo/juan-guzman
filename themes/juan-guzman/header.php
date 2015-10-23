@@ -47,6 +47,8 @@
 		<script> try{Typekit.load({ async: true });}catch(e){} </script>
 		<!-- Google Maps -->
 		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=es&libraries=places&key=AIzaSyAjE9TVybKKQNNOa1g760xJ4y6b5YaZmq4"></script>
+		<!-- Twitter -->
+		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 
 		<!-- Hotjar Tracking Code for www.fotografica.mx -->
 		<script>

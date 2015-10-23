@@ -1,4 +1,5 @@
 var $=jQuery.noConflict();
+var infoWindows = [];
 
 /*------------------------------------*\
 	#GENERAL FUNCTIONS
@@ -102,6 +103,7 @@ function showSingleMap( lat, lng, heading, isAerial, decada ){
 function addDecadaFilter( mapa, markers ){
 
     $('.filtro-decada a').click(function(){
+        closeAllInfoWindows();
         var decada = $(this).data('decada');
         $('.filtro-decada a').removeClass('active');
         $(this).addClass('active');
@@ -155,14 +157,14 @@ function autoCenter( map, markers ) {
 
 function createInfoWindow( mapa, marker, permalink, imgUrl ){
 
-    var infoWindows = new google.maps.InfoWindow({ maxWidth: 200 });
-    infoWindows.setContent( '<a class="[ text-center block ]" href="' + permalink + '"><img class="[ info-window__img ]" src="' + imgUrl + '">Ver foto<a/>' );
+    var infoWindow = new google.maps.InfoWindow({ maxWidth: 200 });
+    infoWindow.setContent( '<a class="[ text-center text-uppercase ][ block ]" href="' + permalink + '"><img class="[ info-window__img ]" src="' + imgUrl + '">ver foto<a/>' );
+
+    infoWindows.push( infoWindow );
 
     google.maps.event.addListener( marker, 'click', function() {
-
-        infoWindows.open( mapa, this );
+        infoWindow.open( mapa, this );
         styleInfoWindow();
-
      });
 
 }// createInfoWindow
@@ -173,6 +175,13 @@ function displayStreetViewImage( el, lat, lng, w, h, heading ){
     $( el ).html( streeViewImg );
 
 }// displayStreetViewImage
+
+function closeAllInfoWindows() {
+    for ( var i=0; i<infoWindows.length; i++ ) infoWindows[i].close();
+}// closeAllInfoWindows
+
+
+
 
 /*------------------------------------*\
 	#AJAX FUNCTIONS
