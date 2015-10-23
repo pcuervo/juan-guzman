@@ -3,11 +3,12 @@
 
 	global $post;
 
-	$image 		= wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-	$fecha 		= get_fecha( $post->ID );
-	$lugar 		= get_lugar( $post->ID );
-	$is_aerial 	= get_vista_aerea( $post->ID );
-	$sabias_que = get_sabias_que( $post->ID );
+	$image 				= wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
+	$fecha 				= get_fecha( $post->ID );
+	$lugar 				= get_lugar( $post->ID );
+	$is_aerial 			= get_vista_aerea( $post->ID );
+	$sabias_que 		= get_sabias_que( $post->ID );
+	$street_view_url 	= get_street_view_url( $post->ID );
 
 ?>
 	<section class="[ main-image ][ container-fluid ][ no-padding margin-bottom ]">
@@ -65,7 +66,7 @@
 			<div class="[ clearfix ][ margin-bottom--large ]">
 				<section class="[ street-view ][ relative ][ no-padding ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
 					<div class="[ street-view-img ]"></div>
-					<a class="[ btn btn-primary btn-sm ][ absolute absolute-top--0 absolute-right--0 ]">
+					<a href="<?php echo $street_view_url ?>" class="[ btn btn-primary btn-sm ][ absolute absolute-top--0 absolute-right--0 ]" target="_blank">
 						<i class="[ fa fa-street-view fa-2x ]"></i>
 					</a>
 				</section>

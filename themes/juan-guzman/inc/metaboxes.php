@@ -33,6 +33,7 @@ function add_metaboxes_fotos_jg(){
 	add_meta_box( 'coordenadas', 'Coordenadas', 'metabox_coordenadas', 'foto-jg', 'advanced', 'high' );
 	add_meta_box( 'heading', 'Heading', 'metabox_heading', 'foto-jg', 'advanced', 'high' );
 	add_meta_box( 'vista_aerea', 'Vista aérea', 'metabox_vista_aerea', 'foto-jg', 'side', 'high' );
+	add_meta_box( 'street_view_url', 'URL StreetView', 'metabox_street_view_url', 'foto-jg', 'advanced', 'high' );
 
 }// add_metaboxes_PAGE
 
@@ -131,6 +132,19 @@ function metabox_vista_aerea( $post ){
 	echo "<label> si</label>";
 
 }// metabox_vista_aerea
+
+/**
+* Display metabox in page or post type
+* @param obj $post
+**/
+function metabox_street_view_url( $post ){
+
+	$street_view_url = get_post_meta($post->ID, '_street_view_url_meta', true);
+	wp_nonce_field(__FILE__, '_street_view_url_meta_nonce');
+	
+	echo "<input type='text' class='[ widefat ]' name='_street_view_url_meta' value='$street_view_url' />";
+
+}// metabox_street_view_url
 	
 
 
@@ -180,6 +194,10 @@ function metabox_vista_aerea( $post ){
 			update_post_meta($post_id, '_vista_aerea_meta', $_POST['_vista_aerea_meta']);
 		} else {
 			update_post_meta($post_id, '_vista_aerea_meta', 'no');
+		}
+		// StreetView URL
+		if ( isset($_POST['_street_view_url_meta']) and check_admin_referer( __FILE__, '_street_view_url_meta_nonce') ){
+			update_post_meta($post_id, '_street_view_url_meta', $_POST['_street_view_url_meta']);
 		}
 
 	}// save_metaboxes_foto_jg
