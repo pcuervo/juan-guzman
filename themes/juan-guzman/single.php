@@ -66,7 +66,7 @@
 			<div class="[ clearfix ][ margin-bottom--large ]">
 				<section class="[ street-view ][ relative ][ no-padding ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
 					<div class="[ street-view-img ]"></div>
-					<a href="<?php echo $street_view_url ?>" class="[ btn btn-primary btn-sm ][ absolute absolute-top--0 absolute-right--0 ]" target="_blank">
+					<a href="<?php echo $street_view_url ?>" class="[ btn btn-primary btn-sm ][ absolute absolute-top--0 absolute-right--0 ]" target="_blankg">
 						<i class="[ fa fa-street-view fa-2x ]"></i>
 					</a>
 				</section>

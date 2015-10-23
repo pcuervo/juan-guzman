@@ -48,6 +48,19 @@
 		<!-- Google Maps -->
 		<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=es&libraries=places&key=AIzaSyAjE9TVybKKQNNOa1g760xJ4y6b5YaZmq4"></script>
 
+		<!-- Hotjar Tracking Code for www.fotografica.mx -->
+		<script>
+		    (function(h,o,t,j,a,r){
+		        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+		        h._hjSettings={hjid:23204,hjsv:5};
+		        a=o.getElementsByTagName('head')[0];
+		        r=o.createElement('script');r.async=1;
+		        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		        a.appendChild(r);
+		    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+
+
 		<?php wp_head(); ?>
 	</head>
 
@@ -88,16 +101,14 @@
 
 		<?php if ( is_archive() OR is_page() ){ ?>
 
-			<header class="[ text-left ][ container ][ fixed z-index-10 ]">
-				<div class="[ container ]">
-					<h1 class="[ header__title ][ bg-primary ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]">
-						<a class="[ color-light ]" href="<?php echo site_url(); ?>">
-							<strong>Juan Guzmán</strong>
-							&nbsp;&nbsp;&nbsp;&nbsp;
-							<i class="[ fa fa-book ]"></i>
-						</a>
-					</h1>
-				</div>
+			<header class="[ z-index-10 ][ absolute top-10px left-10px ]">
+				<h1 class="[ header__title ][ bg-primary ][ padding--xs no-margin ][ text-uppercase ][ inline-block ]">
+					<a class="[ color-light ]" href="<?php echo site_url(); ?>">
+						<strong>Juan Guzmán</strong>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<i class="[ fa fa-book ]"></i>
+					</a>
+				</h1>
 			</header>
 
 		<?php } ?>

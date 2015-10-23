@@ -4,6 +4,19 @@ var $=jQuery.noConflict();
 	#GENERAL FUNCTIONS
 \*------------------------------------*/
 
+/**
+ * Estilo personalizado para InfoWindow de GMap
+**/
+function styleInfoWindow(){
+    var iwOuter = $('.gm-style-iw');
+    var iwBackground = iwOuter.prev();
+    iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+    iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+    iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1'});
+    
+}// styleInfoWindow
+
+
 
 /*------------------------------------*\
     #MAP FUNCTIONS
@@ -142,15 +155,15 @@ function autoCenter( map, markers ) {
 
 function createInfoWindow( mapa, marker, permalink, imgUrl ){
 
-    var infoWindows = new google.maps.InfoWindow({ maxWidth: 120 });
-    infoWindows.setContent( '<a class="[ text-center ]" href="' + permalink + '"><img class="[ info-window__img ]" src="' + imgUrl + '">Ver foto<a/>' );
+    var infoWindows = new google.maps.InfoWindow({ maxWidth: 200 });
+    infoWindows.setContent( '<a class="[ text-center block ]" href="' + permalink + '"><img class="[ info-window__img ]" src="' + imgUrl + '">Ver foto<a/>' );
 
     google.maps.event.addListener( marker, 'click', function() {
+
         infoWindows.open( mapa, this );
-    });
-    // google.maps.event.addListener(marker, 'mouseout', function() {
-    //     infoWindows.close();
-    // });
+        styleInfoWindow();
+
+     });
 
 }// createInfoWindow
 

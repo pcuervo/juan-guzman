@@ -6154,8 +6154,23 @@ header.fixed {
   display: table;
 }
 .info-window__img {
-  width: 120px;
+  width: 200px;
   height: auto;
+}
+.gm-style-iw {
+  width: 200px !important;
+  top: 15px !important;
+  left: 0 !important;
+  background-color: #fff;
+  border-radius: 2px 2px 0 0;
+}
+.gm-style-iw + div {
+  position: absolute !important;
+  opacity: 1 !important;
+  right: 48px !important;
+  top: 8px !important;
+  border-radius: 50%;
+  box-shadow: 0 0 0px 5px #ffffff, 0 0 5px 7px #d91803;
 }
 .section__info {
   padding: 36px 18px;
@@ -6948,6 +6963,12 @@ header.fixed {
 }
 .top-50 {
   top: 50vh;
+}
+.top-10px {
+  top: 10px;
+}
+.left-10px {
+  left: 10px;
 }
 .absolute-right--0 {
   right: 0;
