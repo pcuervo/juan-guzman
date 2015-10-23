@@ -10,7 +10,15 @@
 
 .section__info--dark{
 	background: @dark; color: @light;
+
+	@media (min-width: @screen-sm){
+		background: fade(@dark, 50%);
+	}
 }
 .section__info--light{
 	background: @light; color: @dark;
+
+	@media (min-width: @screen-sm){
+		background: fade(@light, 70%);
+	}
 }
