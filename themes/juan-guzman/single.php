@@ -52,17 +52,10 @@
 			</section>
 
 			<section class="[ col-xs-1 ][ no-padding ]">
-<<<<<<< HEAD
-				<a href="" class="[ bg-gray-light ][ btn--square ]">
+				<a href="" class="[ bg-gray-light ][ btn--square ][ js-fb-share ]">
 					<i class="[ fa fa-facebook-official ]"></i>
 				</a>
-				<a href="" class="[ bg-gray ][ btn--square ]">
-=======
-				<a href="" class="[ bg-gray-xlight ][ btn--square ][ js-fb-share ]">
-					<i class="[ fa fa-facebook-official ]"></i>
-				</a>
-				<a href="https://twitter.com/intent/tweet?via=FotograficaMx&url=<?php echo $tiny_url; ?>&text=<?php echo get_the_title(); ?>" class="[ bg-gray-light ][ btn--square ]">
->>>>>>> 3f48ef9078cfd1764a404b223901fb8408c0a88b
+				<a href="https://twitter.com/intent/tweet?via=FotograficaMx&url=<?php echo $tiny_url; ?>&text=<?php echo get_the_title(); ?>" class="[ bg-gray ][ btn--square ]">
 					<i class="[ fa fa-twitter ]"></i>
 				</a>
 			</section>
@@ -75,7 +68,7 @@
 				<section class="[ street-view ][ relative ][ no-padding ][ col-xs-10 col-sm-8 col-md-6 ][ col-xs-offset-1 col-sm-offset-2 col-md-offset-3 ]">
 					<div class="[ street-view-img ]"></div>
 					<a href="<?php echo $street_view_url ?>" class="[ btn btn-primary btn-sm ][ absolute absolute-top--0 absolute-right--0 ]" target="_blankg">
-						<i class="[ fa fa-street-view fa-2x ]"></i>
+						<img src="<?php echo THEMEPATH; ?>img/streetview.png" alt="streetview">
 					</a>
 				</section>
 			</div><!-- clearfix -->
