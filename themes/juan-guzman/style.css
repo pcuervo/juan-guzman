@@ -1282,6 +1282,7 @@ h6,
 h2 {
   margin-bottom: 40px;
   text-transform: uppercase;
+  line-height: 1.43;
 }
 p {
   margin: 0 0 12.5px;
@@ -6215,6 +6216,24 @@ header.fixed {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    overflow-y: scroll;
+  }
+}
+@media (min-width: 768px) {
+  .section__text h2 {
+    width: 50%;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin: 0;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .section__text h2 {
+    width: 100%;
   }
 }
 .section__info--dark {
