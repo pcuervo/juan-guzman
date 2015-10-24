@@ -17,11 +17,11 @@ function footer_scripts(){
 					#HOME
 				\*------------------------------------*/
 
-				toggleElementOnSscroll( $('header'), '.hero__text');
+				//toggleElementOnSscroll( $('header'), '.hero__text');
 				toggleElementOnSscroll( $('.image-bg--hero'), '.btn--map--float');
 
 				$(window).scroll(function(){
-					toggleElementOnSscroll( $('header'), '.hero__text');
+					//toggleElementOnSscroll( $('header'), '.hero__text');
 					toggleElementOnSscroll( $('.image-bg--hero'), '.btn--map--float');
 				});
 
