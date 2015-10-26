@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<a class="[ btn--map--float js-btn--map--float ][ btn btn-primary btn-sm ][ uppercase ][ fixed top-50 ][ z-index-10 ]" href="">
+	<a class="[ btn--map--float js-btn--map--float ][ btn btn-primary btn-sm ][ uppercase ][ fixed top-50 ][ z-index-10 ]" href="<?php echo site_url('foto-jg'); ?>">
 		Mapa
 	</a>
 
