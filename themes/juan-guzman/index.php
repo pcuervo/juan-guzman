@@ -20,19 +20,19 @@
 	<section class="[ bg-dark ]">
 		<div class="[ container ]">
 			<div class="[ row ][ text-center ][ padding-top-bottom--large ]">
-				<div class="[ col-xs-6 ][ margin-bottom ]">
+<!-- 				<div class="[ col-xs-6 ][ margin-bottom ]">
 					<a href="#" class="[ btn btn-bordered btn-sm ]">
 						Leer texto
 					</a>
-				</div>
-				<div class="[ col-xs-6 ][ margin-bottom ]">
+				</div> -->
+				<div class="[ col-xs-12 ][ margin-bottom ][ text-center ]">
 					<a href="<?php echo site_url('foto-jg'); ?>" class="[ btn btn-bordered btn-sm ]">
 						Ir a mapa
 					</a>
 				</div>
-				<div class="[ col-xs-6 ]">
+<!-- 				<div class="[ col-xs-6 ]">
 					<span class="[ color-brand-primary text-center ]">&#8595;</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
