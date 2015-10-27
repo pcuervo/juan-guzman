@@ -4,7 +4,7 @@
 		Mapa
 	</a>
 
-	<section class="[ image-bg image-bg--hero ][ relative ]">
+	<section class="[ image-bg image-bg--hero ]">
 		<img class="[ hero__image ]" src="<?php echo THEMEPATH; ?>img/img1.jpg" alt="">
 		<div class="[ hero__text ]">
 			<p class="[ bg-light ][ hero__subtitle ][ padding no-margin ][ color-dark font-sans-serif text-uppercase ]"><strong>La crónica citadina de</strong></p>
