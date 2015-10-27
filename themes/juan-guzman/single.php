@@ -9,7 +9,7 @@
 	$is_aerial 			= get_vista_aerea( $post->ID );
 	$sabias_que 		= get_sabias_que( $post->ID );
 	$street_view_url 	= get_street_view_url( $post->ID );
-	$tiny_url			= file_get_contents( 'http://tinyurl.com/api-create.php?url=http://scripting.com/');
+	$tiny_url			= file_get_contents( 'http://tinyurl.com/api-create.php?url=' . get_permalink() );
 
 ?>
 	<section class="[ main-image ][ container-fluid ][ no-padding margin-bottom ]">
