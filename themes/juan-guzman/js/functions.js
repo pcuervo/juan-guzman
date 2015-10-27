@@ -220,7 +220,6 @@ function getScrollY() {
  */
  function toggleElementOnSscroll(elementTrigger, elementToToggle){
     var elementHeight = getElementHeight(elementTrigger);
-    console.log(elementHeight);
     //Scrolled pixels in Y axis
     var sy = getScrollY();
     //Compare the two numbers, when they are the same or less
